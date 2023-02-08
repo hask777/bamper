@@ -1,50 +1,52 @@
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.dispatcher.filters import Text
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from aiogram.utils.markdown import hbold, hlink
-# from main import collect_data
+
 import json
 import os
 import time
 
+from utils import get_brands
 from models import get_models
+from details import get_detail
 
 bot = Bot(token='5927159558:AAFslDjCx3gFsP9lUFtpoQFDVDw8ZdmPxzc', parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
 
+
 @dp.message_handler(commands='start')
 async def start(message: types.Message):
 
-    with open('br_list.json', 'r', encoding='utf-8') as f:
-        br = json.load(f)
+    start_buttons = get_brands()
+    keyboard = InlineKeyboardMarkup(row_width=2) # row_width
 
-    start_buttons = br
-
-    keyboard = types.ReplyKeyboardMarkup()
-    keyboard.add(*start_buttons)    
+    for model in start_buttons:
+        btn = InlineKeyboardButton(text=model, callback_data=model)
+        keyboard.add(btn)
 
     await message.answer('Выберете марку', reply_markup=keyboard)
 
-with open('br_list.json', 'r', encoding='utf-8') as f:
-    mds = json.load(f)
-    print(mds)
+@dp.callback_query_handler()
+async def models_callback(callback: types.CallbackQuery):
+    if callback.data in get_brands():
 
-@dp.message_handler(Text(equals=mds))
-async def get_md(message: types.Message):
+        brand = callback.data
+        models = get_models(brand.lower())
 
-    brand = message.text
-   
-    models_buttons = get_models(brand.lower())
+        keyboard = InlineKeyboardMarkup()
 
-    print(get_models(brand.lower()))
+        for model in models:
+            value = model.split()
+            value = value[-1].lower()
+            # print(value)
+            btn = InlineKeyboardButton(text=model, callback_data=value)
+            print(btn)
+            keyboard.add(btn)
 
-    keyboard = types.ReplyKeyboardMarkup()
-    keyboard.add(*models_buttons)    
+        await bot.send_message(chat_id= '5650732610',text='Выберите модель', reply_markup=keyboard)
+        
 
-    await message.answer('Выберете модель', reply_markup=keyboard)
-
-@dp.message_handler()
-async def get_discount_knifes(message: types.Message):
-    await message.answer('Выберете запчасть')
 
 def main():
     executor.start_polling(dp)

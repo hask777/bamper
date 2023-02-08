@@ -17,7 +17,7 @@ def get_models(brand):
         links  = ul.find_all('a')
 
         for a in links:
-            md_.append(a.text)
-    print(md_)
+            md_.append(a.text.strip())
+    # print(md_)
 
     return md_

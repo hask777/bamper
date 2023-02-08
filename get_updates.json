@@ -1,0 +1,627 @@
+[
+    [
+        {
+            "text": "Acura"
+        }
+    ],
+    [
+        {
+            "text": "Alfa Romeo"
+        }
+    ],
+    [
+        {
+            "text": "Aston Martin"
+        }
+    ],
+    [
+        {
+            "text": "Audi"
+        }
+    ],
+    [
+        {
+            "text": "Austin"
+        }
+    ],
+    [
+        {
+            "text": "BAW"
+        }
+    ],
+    [
+        {
+            "text": "Bentley"
+        }
+    ],
+    [
+        {
+            "text": "BMW"
+        }
+    ],
+    [
+        {
+            "text": "Brilliance"
+        }
+    ],
+    [
+        {
+            "text": "Buick"
+        }
+    ],
+    [
+        {
+            "text": "BYD"
+        }
+    ],
+    [
+        {
+            "text": "Cadillac"
+        }
+    ],
+    [
+        {
+            "text": "Changan"
+        }
+    ],
+    [
+        {
+            "text": "Chery"
+        }
+    ],
+    [
+        {
+            "text": "Chevrolet"
+        }
+    ],
+    [
+        {
+            "text": "Chrysler"
+        }
+    ],
+    [
+        {
+            "text": "Citroen"
+        }
+    ],
+    [
+        {
+            "text": "Claas"
+        }
+    ],
+    [
+        {
+            "text": "Dacia"
+        }
+    ],
+    [
+        {
+            "text": "Daewoo"
+        }
+    ],
+    [
+        {
+            "text": "DAF"
+        }
+    ],
+    [
+        {
+            "text": "Daihatsu"
+        }
+    ],
+    [
+        {
+            "text": "Datsun"
+        }
+    ],
+    [
+        {
+            "text": "Dennis"
+        }
+    ],
+    [
+        {
+            "text": "Dodge"
+        }
+    ],
+    [
+        {
+            "text": "DongFeng"
+        }
+    ],
+    [
+        {
+            "text": "DS"
+        }
+    ],
+    [
+        {
+            "text": "FAW"
+        }
+    ],
+    [
+        {
+            "text": "Fiat"
+        }
+    ],
+    [
+        {
+            "text": "Ford"
+        }
+    ],
+    [
+        {
+            "text": "Foton"
+        }
+    ],
+    [
+        {
+            "text": "Freightliner"
+        }
+    ],
+    [
+        {
+            "text": "Geely"
+        }
+    ],
+    [
+        {
+            "text": "Genesis"
+        }
+    ],
+    [
+        {
+            "text": "GMC"
+        }
+    ],
+    [
+        {
+            "text": "Great-Wall"
+        }
+    ],
+    [
+        {
+            "text": "Hafei"
+        }
+    ],
+    [
+        {
+            "text": "Haima"
+        }
+    ],
+    [
+        {
+            "text": "Haval"
+        }
+    ],
+    [
+        {
+            "text": "Honda"
+        }
+    ],
+    [
+        {
+            "text": "Hummer"
+        }
+    ],
+    [
+        {
+            "text": "Hyundai"
+        }
+    ],
+    [
+        {
+            "text": "IFA"
+        }
+    ],
+    [
+        {
+            "text": "Indian"
+        }
+    ],
+    [
+        {
+            "text": "Infiniti"
+        }
+    ],
+    [
+        {
+            "text": "Innocenti"
+        }
+    ],
+    [
+        {
+            "text": "Iran-Khodro"
+        }
+    ],
+    [
+        {
+            "text": "Isuzu"
+        }
+    ],
+    [
+        {
+            "text": "Iveco"
+        }
+    ],
+    [
+        {
+            "text": "JAC"
+        }
+    ],
+    [
+        {
+            "text": "Jaguar"
+        }
+    ],
+    [
+        {
+            "text": "JCB"
+        }
+    ],
+    [
+        {
+            "text": "Jeep"
+        }
+    ],
+    [
+        {
+            "text": "Kia"
+        }
+    ],
+    [
+        {
+            "text": "Kogel"
+        }
+    ],
+    [
+        {
+            "text": "Krone"
+        }
+    ],
+    [
+        {
+            "text": "Lada"
+        }
+    ],
+    [
+        {
+            "text": "Lancia"
+        }
+    ],
+    [
+        {
+            "text": "Land-Rover"
+        }
+    ],
+    [
+        {
+            "text": "LDV"
+        }
+    ],
+    [
+        {
+            "text": "Lexus"
+        }
+    ],
+    [
+        {
+            "text": "Lifan"
+        }
+    ],
+    [
+        {
+            "text": "Lincoln"
+        }
+    ],
+    [
+        {
+            "text": "Lublin"
+        }
+    ],
+    [
+        {
+            "text": "Mahindra"
+        }
+    ],
+    [
+        {
+            "text": "MAN"
+        }
+    ],
+    [
+        {
+            "text": "Maserati"
+        }
+    ],
+    [
+        {
+            "text": "Maybach"
+        }
+    ],
+    [
+        {
+            "text": "Mazda"
+        }
+    ],
+    [
+        {
+            "text": "Mercedes"
+        }
+    ],
+    [
+        {
+            "text": "Mercury"
+        }
+    ],
+    [
+        {
+            "text": "MG"
+        }
+    ],
+    [
+        {
+            "text": "Microcar"
+        }
+    ],
+    [
+        {
+            "text": "Mini"
+        }
+    ],
+    [
+        {
+            "text": "Mitsubishi"
+        }
+    ],
+    [
+        {
+            "text": "Neoplan"
+        }
+    ],
+    [
+        {
+            "text": "Nissan"
+        }
+    ],
+    [
+        {
+            "text": "Oldsmobile"
+        }
+    ],
+    [
+        {
+            "text": "Opel"
+        }
+    ],
+    [
+        {
+            "text": "Perodua"
+        }
+    ],
+    [
+        {
+            "text": "Peugeot"
+        }
+    ],
+    [
+        {
+            "text": "Plymouth"
+        }
+    ],
+    [
+        {
+            "text": "Pontiac"
+        }
+    ],
+    [
+        {
+            "text": "Porsche"
+        }
+    ],
+    [
+        {
+            "text": "Proton"
+        }
+    ],
+    [
+        {
+            "text": "Ravon"
+        }
+    ],
+    [
+        {
+            "text": "Renault"
+        }
+    ],
+    [
+        {
+            "text": "Rolls-Royce"
+        }
+    ],
+    [
+        {
+            "text": "Rover"
+        }
+    ],
+    [
+        {
+            "text": "Saab"
+        }
+    ],
+    [
+        {
+            "text": "Samsung"
+        }
+    ],
+    [
+        {
+            "text": "Saturn"
+        }
+    ],
+    [
+        {
+            "text": "Scania"
+        }
+    ],
+    [
+        {
+            "text": "Schmitz"
+        }
+    ],
+    [
+        {
+            "text": "Scion"
+        }
+    ],
+    [
+        {
+            "text": "Seat"
+        }
+    ],
+    [
+        {
+            "text": "Setra"
+        }
+    ],
+    [
+        {
+            "text": "Skoda"
+        }
+    ],
+    [
+        {
+            "text": "Smart"
+        }
+    ],
+    [
+        {
+            "text": "SsangYong"
+        }
+    ],
+    [
+        {
+            "text": "Subaru"
+        }
+    ],
+    [
+        {
+            "text": "Suzuki"
+        }
+    ],
+    [
+        {
+            "text": "Tata"
+        }
+    ],
+    [
+        {
+            "text": "Tatra"
+        }
+    ],
+    [
+        {
+            "text": "Tesla"
+        }
+    ],
+    [
+        {
+            "text": "Toyota"
+        }
+    ],
+    [
+        {
+            "text": "Triumph"
+        }
+    ],
+    [
+        {
+            "text": "Victory"
+        }
+    ],
+    [
+        {
+            "text": "Volkswagen"
+        }
+    ],
+    [
+        {
+            "text": "Volvo"
+        }
+    ],
+    [
+        {
+            "text": "Wartburg"
+        }
+    ],
+    [
+        {
+            "text": "Yuejin"
+        }
+    ],
+    [
+        {
+            "text": "Zotye"
+        }
+    ],
+    [
+        {
+            "text": "Богдан"
+        }
+    ],
+    [
+        {
+            "text": "ГАЗ"
+        }
+    ],
+    [
+        {
+            "text": "ЗАЗ"
+        }
+    ],
+    [
+        {
+            "text": "ЗиЛ"
+        }
+    ],
+    [
+        {
+            "text": "ИЖ"
+        }
+    ],
+    [
+        {
+            "text": "КамАЗ"
+        }
+    ],
+    [
+        {
+            "text": "МАЗ"
+        }
+    ],
+    [
+        {
+            "text": "Москвич"
+        }
+    ],
+    [
+        {
+            "text": "МТЗ"
+        }
+    ],
+    [
+        {
+            "text": "ПАЗ"
+        }
+    ],
+    [
+        {
+            "text": "УАЗ"
+        }
+    ],
+    [
+        {
+            "text": "Урал"
+        }
+    ]
+]
