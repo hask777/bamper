@@ -6,26 +6,38 @@ from env import *
 import time
 
 def main():
+
     url = base_url+'getUpdates'
     getUp = requests.get(url).json()
+    try:
+        lats_update = getUp['result'][-2]['update_id']
+        print(lats_update)
 
-    with open('get_updates.json', 'w', encoding='utf-8') as f:
-        json.dump(getUp, f, indent=4, ensure_ascii=False)
+        with open('logs.json', 'w', encoding='utf-8') as f:
+            json.dump(getUp, f, indent=4, ensure_ascii=False)
+    except:
+        return
 
-    last_update = 0
-    print(last_update)
-    for update in getUp['result']:
+    params = {
+        'offset': lats_update + 1
+    }
+    # print(params['offset'])
+    url = base_url+'getUpdates?'
 
-        text = f"Your write: {update['message']['text']}"
-        # print(text)
+    getUp = requests.get(url, params=params).json()
+    print(getUp)
 
-        last_update = update['update_id']
-        # print(last_update)
-        params = {
-                'offset': last_update + 1
-            }
+    if len(getUp['result']) > 0:
 
-        params = {
+        # with open('logs.json', 'w', encoding='utf-8') as f:
+        #     json.dump(getUp, f, indent=4, ensure_ascii=False)
+
+        for update in getUp['result']:
+            print(update['message']['text'])
+            lats_update = update['update_id']
+            send_message_url = base_url+'sendMessage?'
+
+            params = {
                 'chat_id':'5650732610',
                 'text': 'Выберете марку',
                 'reply_markup': json.dumps({
@@ -34,8 +46,27 @@ def main():
                 })
             }
 
-        send_message_url = base_url+'sendMessage?'
-        send_brands = requests.get(send_message_url, params=params).json()
+            send_brands = requests.get(send_message_url, params=params).json()
+
+        
+
+
+
+
+            # params = {
+            #         'chat_id':'5650732610',
+            #         'text': 'Выберете марку',
+            #         'reply_markup': json.dumps({
+            #         'keyboard': get_keyboard(get_brands),
+            #         # 'resize_keyboard': True 
+            #         })
+            #     }
+
+            #  if command equals /start
+
+            # send_message_url = base_url+'sendMessage?'
+            # send_brands = requests.get(send_message_url, params=params).json()
+
         # print(update['message']['text'].replace(' ', '').lower())
         # model = update['message']['text'].replace(' ', '').lower()
 
@@ -58,4 +89,4 @@ def main():
 while True:
     if __name__ == '__main__':
         main()
-        time.sleep(10)
+        time.sleep(3)

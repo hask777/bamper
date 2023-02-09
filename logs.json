@@ -1,0 +1,47 @@
+{
+    "ok": true,
+    "result": [
+        {
+            "update_id": 410004552,
+            "message": {
+                "message_id": 1261,
+                "from": {
+                    "id": 5650732610,
+                    "is_bot": false,
+                    "first_name": "Hask777",
+                    "last_name": "Django",
+                    "language_code": "ru"
+                },
+                "chat": {
+                    "id": 5650732610,
+                    "first_name": "Hask777",
+                    "last_name": "Django",
+                    "type": "private"
+                },
+                "date": 1675935341,
+                "text": "Alfa Romeo"
+            }
+        },
+        {
+            "update_id": 410004553,
+            "message": {
+                "message_id": 1263,
+                "from": {
+                    "id": 5650732610,
+                    "is_bot": false,
+                    "first_name": "Hask777",
+                    "last_name": "Django",
+                    "language_code": "ru"
+                },
+                "chat": {
+                    "id": 5650732610,
+                    "first_name": "Hask777",
+                    "last_name": "Django",
+                    "type": "private"
+                },
+                "date": 1675935353,
+                "text": "Aston Martin"
+            }
+        }
+    ]
+}
