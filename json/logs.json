@@ -2,9 +2,9 @@
     "ok": true,
     "result": [
         {
-            "update_id": 410004552,
+            "update_id": 410004688,
             "message": {
-                "message_id": 1261,
+                "message_id": 1667,
                 "from": {
                     "id": 5650732610,
                     "is_bot": false,
@@ -18,14 +18,14 @@
                     "last_name": "Django",
                     "type": "private"
                 },
-                "date": 1675935341,
-                "text": "Alfa Romeo"
+                "date": 1676023348,
+                "text": "запчасти для Acura-CL"
             }
         },
         {
-            "update_id": 410004553,
+            "update_id": 410004689,
             "message": {
-                "message_id": 1263,
+                "message_id": 1671,
                 "from": {
                     "id": 5650732610,
                     "is_bot": false,
@@ -39,8 +39,8 @@
                     "last_name": "Django",
                     "type": "private"
                 },
-                "date": 1675935353,
-                "text": "Aston Martin"
+                "date": 1676023353,
+                "text": "Аудио, видео, медиа"
             }
         }
     ]

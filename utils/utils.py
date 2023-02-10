@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import json
 
 def get_brands():
-    with open('br_list.json', 'r', encoding='utf-8') as f:
+    with open('json/br_list.json', 'r', encoding='utf-8') as f:
         mds = json.load(f)
         # print(mds)
     return mds
@@ -26,13 +26,64 @@ def get_models(brand):
 
     return md_
 
+def get_detail(model):
+    dt_ = []
 
-def get_keyboard(func):
+    model = model.split()
+    model = model[-1].lower()
+
+    url = f"https://bamper.by/catalog/{model}/"
+
+    req = requests.get(url).text
+
+    soup = BeautifulSoup(req, 'lxml')
+    uls = soup.select('ul.cat-list.col-sm-6')
+    for ul in uls:
+        links  = ul.find_all('li', class_='list-header')
+
+        for a in links:
+            dt_.append(a.text)
+    # print(dt_)
+
+    return dt_
+
+def get_type(detail, model):
+    dt_ = []
+
+    url = f"https://bamper.by/catalog/{model}/{detail}/"
+
+    req = requests.get(url).text
+
+    soup = BeautifulSoup(req, 'lxml')
+    uls = soup.select('ul.cat-list.col-sm-6')
+    for ul in uls:
+        links  = ul.find_all('li', class_='list-header')
+
+        for a in links:
+            dt_.append(a.text)
+    # print(dt_)
+
+    return dt_
+
+
+
+
+def get_keyboard(func=None, models=None):
     keyboard = []
 
-    for item in func():
-        res = [{
-            'text': item
-        }]
-        keyboard.append(res)
-    return keyboard
+    if func is not None:
+        for item in func():
+            res = [{
+                'text': item
+            }]
+            keyboard.append(res)
+        return keyboard
+
+    if models is not None:
+        for model in models:
+            res = [{
+                'text': model
+            }]
+            keyboard.append(res)
+        return keyboard
+
