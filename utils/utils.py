@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import json
 
 def get_brands():
-    with open('json/br_list.json', 'r', encoding='utf-8') as f:
+    with open('bamper/json/br_list.json', 'r', encoding='utf-8') as f:
         mds = json.load(f)
         # print(mds)
     return mds
@@ -47,7 +47,7 @@ def get_detail(model):
 
     return dt_
 
-def get_type(detail, model):
+def get_type(detail=None, model=None):
     dt_ = []
 
     url = f"https://bamper.by/catalog/{model}/{detail}/"
@@ -65,8 +65,9 @@ def get_type(detail, model):
 
     return dt_
 
-
-
+"""
+KeyBoards
+"""
 
 def get_keyboard(func=None, models=None):
     keyboard = []
@@ -86,4 +87,27 @@ def get_keyboard(func=None, models=None):
             }]
             keyboard.append(res)
         return keyboard
+
+
+
+def get_inline_keyboard(func=None, models=None):
+    inl = []
+
+    if func is not None:
+        for item in func():
+            res = [{
+                'text': item,
+                'callback_data': item
+            }]
+            inl.append(res)
+        return inl
+
+    if models is not None:
+        for model in models:
+            res = [{
+                'text': model,
+                'callback_data': model
+            }]
+            inl.append(res)
+        return inl
 
