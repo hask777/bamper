@@ -1,0 +1,812 @@
+{
+    "ok": true,
+    "result": [
+        {
+            "update_id": 529581984,
+            "message": {
+                "message_id": 266,
+                "from": {
+                    "id": 5650732610,
+                    "is_bot": false,
+                    "first_name": "Hask777",
+                    "last_name": "Django",
+                    "language_code": "ru"
+                },
+                "chat": {
+                    "id": 5650732610,
+                    "first_name": "Hask777",
+                    "last_name": "Django",
+                    "type": "private"
+                },
+                "date": 1676462849,
+                "text": "f"
+            }
+        },
+        {
+            "update_id": 529581985,
+            "callback_query": {
+                "id": "5822967687875209455",
+                "from": {
+                    "id": 5650732610,
+                    "is_bot": false,
+                    "first_name": "Hask777",
+                    "last_name": "Django",
+                    "language_code": "ru"
+                },
+                "message": {
+                    "message_id": 267,
+                    "from": {
+                        "id": 6026613178,
+                        "is_bot": true,
+                        "first_name": "bamper777",
+                        "username": "bamper777bot"
+                    },
+                    "chat": {
+                        "id": 5650732610,
+                        "first_name": "Hask777",
+                        "last_name": "Django",
+                        "type": "private"
+                    },
+                    "date": 1676462850,
+                    "text": "Chose brand",
+                    "reply_markup": {
+                        "inline_keyboard": [
+                            [
+                                {
+                                    "text": "Acura",
+                                    "callback_data": "Acura"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Alfa Romeo",
+                                    "callback_data": "Alfa Romeo"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Aston Martin",
+                                    "callback_data": "Aston Martin"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Audi",
+                                    "callback_data": "Audi"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Austin",
+                                    "callback_data": "Austin"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "BAW",
+                                    "callback_data": "BAW"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Bentley",
+                                    "callback_data": "Bentley"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "BMW",
+                                    "callback_data": "BMW"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Brilliance",
+                                    "callback_data": "Brilliance"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Buick",
+                                    "callback_data": "Buick"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "BYD",
+                                    "callback_data": "BYD"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Cadillac",
+                                    "callback_data": "Cadillac"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Changan",
+                                    "callback_data": "Changan"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Chery",
+                                    "callback_data": "Chery"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Chevrolet",
+                                    "callback_data": "Chevrolet"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Chrysler",
+                                    "callback_data": "Chrysler"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Citroen",
+                                    "callback_data": "Citroen"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Claas",
+                                    "callback_data": "Claas"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Dacia",
+                                    "callback_data": "Dacia"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Daewoo",
+                                    "callback_data": "Daewoo"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "DAF",
+                                    "callback_data": "DAF"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Daihatsu",
+                                    "callback_data": "Daihatsu"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Datsun",
+                                    "callback_data": "Datsun"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Dennis",
+                                    "callback_data": "Dennis"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Dodge",
+                                    "callback_data": "Dodge"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "DongFeng",
+                                    "callback_data": "DongFeng"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "DS",
+                                    "callback_data": "DS"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "FAW",
+                                    "callback_data": "FAW"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Fiat",
+                                    "callback_data": "Fiat"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Ford",
+                                    "callback_data": "Ford"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Foton",
+                                    "callback_data": "Foton"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Freightliner",
+                                    "callback_data": "Freightliner"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Geely",
+                                    "callback_data": "Geely"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Genesis",
+                                    "callback_data": "Genesis"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "GMC",
+                                    "callback_data": "GMC"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Great-Wall",
+                                    "callback_data": "Great-Wall"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Hafei",
+                                    "callback_data": "Hafei"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Haima",
+                                    "callback_data": "Haima"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Haval",
+                                    "callback_data": "Haval"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Honda",
+                                    "callback_data": "Honda"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Hummer",
+                                    "callback_data": "Hummer"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Hyundai",
+                                    "callback_data": "Hyundai"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "IFA",
+                                    "callback_data": "IFA"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Indian",
+                                    "callback_data": "Indian"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Infiniti",
+                                    "callback_data": "Infiniti"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Innocenti",
+                                    "callback_data": "Innocenti"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Iran-Khodro",
+                                    "callback_data": "Iran-Khodro"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Isuzu",
+                                    "callback_data": "Isuzu"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Iveco",
+                                    "callback_data": "Iveco"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "JAC",
+                                    "callback_data": "JAC"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Jaguar",
+                                    "callback_data": "Jaguar"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "JCB",
+                                    "callback_data": "JCB"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Jeep",
+                                    "callback_data": "Jeep"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Kia",
+                                    "callback_data": "Kia"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Kogel",
+                                    "callback_data": "Kogel"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Krone",
+                                    "callback_data": "Krone"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Lada",
+                                    "callback_data": "Lada"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Lancia",
+                                    "callback_data": "Lancia"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Land-Rover",
+                                    "callback_data": "Land-Rover"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "LDV",
+                                    "callback_data": "LDV"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Lexus",
+                                    "callback_data": "Lexus"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Lifan",
+                                    "callback_data": "Lifan"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Lincoln",
+                                    "callback_data": "Lincoln"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Lublin",
+                                    "callback_data": "Lublin"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Mahindra",
+                                    "callback_data": "Mahindra"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "MAN",
+                                    "callback_data": "MAN"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Maserati",
+                                    "callback_data": "Maserati"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Maybach",
+                                    "callback_data": "Maybach"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Mazda",
+                                    "callback_data": "Mazda"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Mercedes",
+                                    "callback_data": "Mercedes"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Mercury",
+                                    "callback_data": "Mercury"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "MG",
+                                    "callback_data": "MG"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Microcar",
+                                    "callback_data": "Microcar"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Mini",
+                                    "callback_data": "Mini"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Mitsubishi",
+                                    "callback_data": "Mitsubishi"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Neoplan",
+                                    "callback_data": "Neoplan"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Nissan",
+                                    "callback_data": "Nissan"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Oldsmobile",
+                                    "callback_data": "Oldsmobile"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Opel",
+                                    "callback_data": "Opel"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Perodua",
+                                    "callback_data": "Perodua"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Peugeot",
+                                    "callback_data": "Peugeot"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Plymouth",
+                                    "callback_data": "Plymouth"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Pontiac",
+                                    "callback_data": "Pontiac"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Porsche",
+                                    "callback_data": "Porsche"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Proton",
+                                    "callback_data": "Proton"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Ravon",
+                                    "callback_data": "Ravon"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Renault",
+                                    "callback_data": "Renault"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Rolls-Royce",
+                                    "callback_data": "Rolls-Royce"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Rover",
+                                    "callback_data": "Rover"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Saab",
+                                    "callback_data": "Saab"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Samsung",
+                                    "callback_data": "Samsung"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Saturn",
+                                    "callback_data": "Saturn"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Scania",
+                                    "callback_data": "Scania"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Schmitz",
+                                    "callback_data": "Schmitz"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Scion",
+                                    "callback_data": "Scion"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Seat",
+                                    "callback_data": "Seat"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Setra",
+                                    "callback_data": "Setra"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Skoda",
+                                    "callback_data": "Skoda"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Smart",
+                                    "callback_data": "Smart"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "SsangYong",
+                                    "callback_data": "SsangYong"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Subaru",
+                                    "callback_data": "Subaru"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Suzuki",
+                                    "callback_data": "Suzuki"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Tata",
+                                    "callback_data": "Tata"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Tatra",
+                                    "callback_data": "Tatra"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Tesla",
+                                    "callback_data": "Tesla"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Toyota",
+                                    "callback_data": "Toyota"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Triumph",
+                                    "callback_data": "Triumph"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Victory",
+                                    "callback_data": "Victory"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Volkswagen",
+                                    "callback_data": "Volkswagen"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Volvo",
+                                    "callback_data": "Volvo"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Wartburg",
+                                    "callback_data": "Wartburg"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Yuejin",
+                                    "callback_data": "Yuejin"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Zotye",
+                                    "callback_data": "Zotye"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Богдан",
+                                    "callback_data": "Богдан"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "ГАЗ",
+                                    "callback_data": "ГАЗ"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "ЗАЗ",
+                                    "callback_data": "ЗАЗ"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "ЗиЛ",
+                                    "callback_data": "ЗиЛ"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "ИЖ",
+                                    "callback_data": "ИЖ"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "КамАЗ",
+                                    "callback_data": "КамАЗ"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "МАЗ",
+                                    "callback_data": "МАЗ"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Москвич",
+                                    "callback_data": "Москвич"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "МТЗ",
+                                    "callback_data": "МТЗ"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "ПАЗ",
+                                    "callback_data": "ПАЗ"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "УАЗ",
+                                    "callback_data": "УАЗ"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Урал",
+                                    "callback_data": "Урал"
+                                }
+                            ]
+                        ]
+                    }
+                },
+                "chat_instance": "6890459376004416835",
+                "data": "Scania"
+            }
+        }
+    ]
+}

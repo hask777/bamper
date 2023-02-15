@@ -8,6 +8,8 @@ import time
 def get_updates():
     url = base_url+'getUpdates'
     getUp = requests.get(url).json()
+    
+    
     try:
         lats_update = getUp['result'][-2]['update_id']
         # print(lats_update)
@@ -23,10 +25,22 @@ def get_updates():
     url = base_url+'getUpdates?'
     getUp = requests.get(url, params=params).json()
 
-    with open('update.json', 'w', encoding='utf-8') as f:
+    with open('json/update.json', 'w', encoding='utf-8') as f:
         json.dump(getUp, f, indent=4, ensure_ascii=False)
+        
+    try:
+        if getUp['result'][0]['callback_query'] is not None:
+            update = getUp['result'][0]
+    except:
+        update = None
 
-    get_brands_butttons(getUp)
+
+    try:
+        if getUp['result'][0]['message']['text'] is not None:
+            get_brands_butttons(getUp)
+    except:
+        get_models_buttons(update)
+
 
 
 
@@ -49,39 +63,48 @@ def get_brands_butttons(request):
 
             send_brands = requests.get(send_message_url, params=params).json()
 
-            with open('callback.json', 'w', encoding='utf-8') as f:
+            with open('json/callback.json', 'w', encoding='utf-8') as f:
                 json.dump(send_brands, f, indent=4, ensure_ascii=False)
 
-            try:
-                get_models_buttons(update['callback_query'])
-            except:
-                return
+            return update
+
 
 def get_models_buttons(update):
-    print(update)
-    with open('last.json', 'w', encoding='utf-8') as f:
-        json.dump(update, f, indent=4, ensure_ascii=False)
-#     try:
-#         print(update['callback_query']['message']['text'])
-#         brand = update['callback_query']['message']['text'].lower()
-#         brand = brand.replace(' ', '')
-#         lats_update = update['update_id']
-#         send_message_url = base_url+'sendMessage?'
+    if update is not None:
+        print(update['callback_query']['data'])
+        with open('json/last.json', 'w', encoding='utf-8') as f:
+            json.dump(update, f, indent=4, ensure_ascii=False)
 
-#         models = get_models(brand)
+        brand = update['callback_query']['data'].lower()
+        brand = brand.replace(' ', '')
+        print(brand)
 
-#         params = {
-#                 'chat_id':'5650732610',
-#                 'text': 'Выберете модель',
-#                 'reply_markup': json.dumps({
-#                 'inline_keyboard': get_inline_keyboard(None, models)
-#                 # 'resize_keyboard': True 
-#             })
-#         }
-        
-#         send_brands = requests.get(send_message_url, params=params).json()
-#     except:
-#         return
+        lats_update = update['update_id']
+
+        send_message_url = base_url+'sendMessage?'
+        print(send_message_url)
+
+
+        models = get_models(brand)
+        # print(get_models(brand))
+
+        params = {
+                    'chat_id':'5650732610',
+                    'text': 'Выберете модель',
+                    'reply_markup': json.dumps({
+                    'inline_keyboard': get_inline_keyboard(None, models)
+                    # 'resize_keyboard': True 
+            })
+        }
+            
+        send_models = requests.get(send_message_url, params=params).json()
+    else:
+        return
+    # def get_details_button():
+    #     print(update['callback_query']['data'])
+    #     with open('last.json', 'w', encoding='utf-8') as f:
+    #         json.dump(update, f, indent=4, ensure_ascii=False)
+
 
 
 

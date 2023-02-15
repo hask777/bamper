@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import json
 
 def get_brands():
-    with open('bamper/json/br_list.json', 'r', encoding='utf-8') as f:
+    with open('json/br_list.json', 'r', encoding='utf-8') as f:
         mds = json.load(f)
         # print(mds)
     return mds
