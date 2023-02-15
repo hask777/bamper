@@ -9,12 +9,11 @@ def get_updates():
     url = base_url+'getUpdates'
     getUp = requests.get(url).json()
     
-    
     try:
         lats_update = getUp['result'][-2]['update_id']
         # print(lats_update)
-        with open('update.json', 'w', encoding='utf-8') as f:
-            json.dump(getUp, f, indent=4, ensure_ascii=False)
+        # with open('update.json', 'w', encoding='utf-8') as f:
+        #     json.dump(getUp, f, indent=4, ensure_ascii=False)
     except:
         return
 
@@ -25,8 +24,8 @@ def get_updates():
     url = base_url+'getUpdates?'
     getUp = requests.get(url, params=params).json()
 
-    with open('json/update.json', 'w', encoding='utf-8') as f:
-        json.dump(getUp, f, indent=4, ensure_ascii=False)
+    # with open('json/update.json', 'w', encoding='utf-8') as f:
+    #     json.dump(getUp, f, indent=4, ensure_ascii=False)
         
     try:
         if getUp['result'][0]['callback_query'] is not None:
@@ -34,14 +33,11 @@ def get_updates():
     except:
         update = None
 
-
     try:
         if getUp['result'][0]['message']['text'] is not None:
             get_brands_butttons(getUp)
     except:
         get_models_buttons(update)
-
-
 
 
 def get_brands_butttons(request):
@@ -104,8 +100,6 @@ def get_models_buttons(update):
     #     print(update['callback_query']['data'])
     #     with open('last.json', 'w', encoding='utf-8') as f:
     #         json.dump(update, f, indent=4, ensure_ascii=False)
-
-
 
 
 def main():
