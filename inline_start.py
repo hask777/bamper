@@ -35,9 +35,16 @@ def get_updates():
 
     try:
         if getUp['result'][0]['message']['text'] is not None:
-            get_brands_butttons(getUp)
+            get_brands_butttons(getUp) 
+         
     except:
-        get_models_buttons(update)
+        if getUp['result'][0]['callback_query']['data'] in get_brands():
+            get_models_buttons(update)
+  
+        try:
+            print(update['callback_query']['data'])
+        except:
+            print('no data')
 
 
 def get_brands_butttons(request):
@@ -63,7 +70,6 @@ def get_brands_butttons(request):
                 json.dump(send_brands, f, indent=4, ensure_ascii=False)
 
             return update
-
 
 def get_models_buttons(update):
     if update is not None:
@@ -96,15 +102,14 @@ def get_models_buttons(update):
         send_models = requests.get(send_message_url, params=params).json()
     else:
         return
-    # def get_details_button():
-    #     print(update['callback_query']['data'])
-    #     with open('last.json', 'w', encoding='utf-8') as f:
-    #         json.dump(update, f, indent=4, ensure_ascii=False)
+
+def get_details_button(update):   
+    print(update['callback_query']['data'].lower())
+
 
 
 def main():
     get_updates()
-
 
 while True:
     if __name__ == '__main__':
