@@ -30,6 +30,7 @@ def get_updates():
     try:
         if getUp['result'][0]['callback_query'] is not None:
             update = getUp['result'][0]
+            
     except:
         update = None
 
@@ -42,7 +43,8 @@ def get_updates():
             get_models_buttons(update)
   
         try:
-            print(update['callback_query']['data'])
+            # print(update['callback_query']['data'])
+            get_details_button(update)
         except:
             print('no data')
 
@@ -105,6 +107,27 @@ def get_models_buttons(update):
 
 def get_details_button(update):   
     print(update['callback_query']['data'].lower())
+
+    model = update['callback_query']['data']
+
+    dt = get_detail(model)
+    print(dt)
+
+    lats_update = update['update_id']
+    send_message_url = base_url+'sendMessage?'
+
+    params = {
+                'chat_id':'5650732610',
+                'text': 'Выберете деталь',
+                'reply_markup': json.dumps({
+                'inline_keyboard': get_inline_keyboard(None, dt),
+                # 'resize_keyboard': True 
+        })
+    }
+
+    send_details = requests.get(send_message_url, params=params).json()
+
+    print('this is get details')
 
 
 
