@@ -43,7 +43,11 @@ def get_updates():
             get_models_buttons(update)
 
         else:
-           get_details_button(update) 
+            get_details_button(update) 
+            # print(dt, md)
+
+            
+            # get_target_buttons(dt, md)
   
 
 
@@ -73,18 +77,18 @@ def get_brands_butttons(request):
 
 def get_models_buttons(update):
     if update is not None:
-        print(update['callback_query']['data'])
+        # print(update['callback_query']['data'])
         with open('json/last.json', 'w', encoding='utf-8') as f:
             json.dump(update, f, indent=4, ensure_ascii=False)
 
         brand = update['callback_query']['data'].lower()
         brand = brand.replace(' ', '')
-        print(brand)
+        # print(brand)
 
         lats_update = update['update_id']
 
         send_message_url = base_url+'sendMessage?'
-        print(send_message_url)
+        # print(send_message_url)
 
 
         models = get_models(brand)
@@ -103,29 +107,54 @@ def get_models_buttons(update):
     else:
         return
 
-def get_details_button(update):   
-    print(update['callback_query']['data'].lower())
+def get_details_button(update):  
 
-    model = update['callback_query']['data']
+    print(update['callback_query']['data'])
+    m_list =[]
 
-    dt = get_detail(model)
-    print(dt)
+    for upd in update['callback_query']['message']['reply_markup']['inline_keyboard']:
+        for up in upd:
+            # print(up['text'])
+            m_list.append(up['text'])
+    print(m_list)
 
-    lats_update = update['update_id']
-    send_message_url = base_url+'sendMessage?'
+    # print(update['callback_query']['data'])
+    if update['callback_query']['data'] in m_list:
 
-    params = {
-                'chat_id':'5650732610',
-                'text': 'Выберете деталь',
-                'reply_markup': json.dumps({
-                'inline_keyboard': get_inline_keyboard(None, dt),
-                # 'resize_keyboard': True 
-        })
-    }
+        md = update['callback_query']['data'].split()[-1].lower()
+        model = update['callback_query']['data']
 
-    send_details = requests.get(send_message_url, params=params).json()
+        dt = get_detail(model)
+        # print(dt)
 
-    print('this is get details')
+        lats_update = update['update_id']
+        send_message_url = base_url+'sendMessage?'
+
+        params = {
+                    'chat_id':'5650732610',
+                    'text': 'Выберете деталь',
+                    'reply_markup': json.dumps({
+                    'inline_keyboard': get_inline_keyboard(None, dt),
+                    # 'resize_keyboard': True 
+            })
+        }
+
+        send_details = requests.get(send_message_url, params=params).json()
+        
+    print(update['callback_query']['data'])
+    return update['callback_query']['data']
+
+    
+
+# def get_target_buttons(dt, md):
+#     print(dt, md)
+    # with open('up.json', 'w', encoding='utf-8') as f:
+    #     json.dump(update, f, ensure_ascii=False, indent=4)
+
+
+
+
+
 
 
 

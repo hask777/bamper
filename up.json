@@ -1,0 +1,138 @@
+{
+    "update_id": 529582432,
+    "callback_query": {
+        "id": "5822967688193752104",
+        "from": {
+            "id": 5650732610,
+            "is_bot": false,
+            "first_name": "Hask777",
+            "last_name": "Django",
+            "language_code": "ru"
+        },
+        "message": {
+            "message_id": 814,
+            "from": {
+                "id": 6026613178,
+                "is_bot": true,
+                "first_name": "bamper777",
+                "username": "bamper777bot"
+            },
+            "chat": {
+                "id": 5650732610,
+                "first_name": "Hask777",
+                "last_name": "Django",
+                "type": "private"
+            },
+            "date": 1676733841,
+            "text": "Выберете модель",
+            "reply_markup": {
+                "inline_keyboard": [
+                    [
+                        {
+                            "text": "запчасти для Skoda-Citigo",
+                            "callback_data": "запчасти для Skoda-Citigo"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Enyaq",
+                            "callback_data": "запчасти для Skoda-Enyaq"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Fabia",
+                            "callback_data": "запчасти для Skoda-Fabia"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Favorit",
+                            "callback_data": "запчасти для Skoda-Favorit"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Felicia",
+                            "callback_data": "запчасти для Skoda-Felicia"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Forman",
+                            "callback_data": "запчасти для Skoda-Forman"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Kamiq",
+                            "callback_data": "запчасти для Skoda-Kamiq"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Karoq",
+                            "callback_data": "запчасти для Skoda-Karoq"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Kodiaq",
+                            "callback_data": "запчасти для Skoda-Kodiaq"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Octavia",
+                            "callback_data": "запчасти для Skoda-Octavia"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Octavia RS",
+                            "callback_data": "запчасти для Skoda-Octavia RS"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Praktik",
+                            "callback_data": "запчасти для Skoda-Praktik"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Rapid",
+                            "callback_data": "запчасти для Skoda-Rapid"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Roomster",
+                            "callback_data": "запчасти для Skoda-Roomster"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Scala",
+                            "callback_data": "запчасти для Skoda-Scala"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Superb",
+                            "callback_data": "запчасти для Skoda-Superb"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "запчасти для Skoda-Yeti",
+                            "callback_data": "запчасти для Skoda-Yeti"
+                        }
+                    ]
+                ]
+            }
+        },
+        "chat_instance": "6890459376004416835",
+        "data": "запчасти для Skoda-Rapid"
+    }
+}
