@@ -1,0 +1,162 @@
+{
+    "update_id": 529582510,
+    "callback_query": {
+        "id": "5822967686185446784",
+        "from": {
+            "id": 5650732610,
+            "is_bot": false,
+            "first_name": "Hask777",
+            "last_name": "Django",
+            "language_code": "ru"
+        },
+        "message": {
+            "message_id": 907,
+            "from": {
+                "id": 6026613178,
+                "is_bot": true,
+                "first_name": "bamper777",
+                "username": "bamper777bot"
+            },
+            "chat": {
+                "id": 5650732610,
+                "first_name": "Hask777",
+                "last_name": "Django",
+                "type": "private"
+            },
+            "date": 1676744188,
+            "text": "Выберете деталь",
+            "reply_markup": {
+                "inline_keyboard": [
+                    [
+                        {
+                            "text": "Аксессуары",
+                            "callback_data": "Аксессуары"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Аудио, видео, медиа",
+                            "callback_data": "Аудио, видео, медиа"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Выхлопная система",
+                            "callback_data": "Выхлопная система"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Двигатель",
+                            "callback_data": "Двигатель"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Диски",
+                            "callback_data": "Диски"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Кузовщина",
+                            "callback_data": "Кузовщина"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Оптика",
+                            "callback_data": "Оптика"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Отопление и вентиляция",
+                            "callback_data": "Отопление и вентиляция"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Пассивная безопасность",
+                            "callback_data": "Пассивная безопасность"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Подвеска",
+                            "callback_data": "Подвеска"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Рулевое управление",
+                            "callback_data": "Рулевое управление"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Салон",
+                            "callback_data": "Салон"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Система охлаждения",
+                            "callback_data": "Система охлаждения"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Системы комфорта",
+                            "callback_data": "Системы комфорта"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Стекла",
+                            "callback_data": "Стекла"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Стеклоочистители",
+                            "callback_data": "Стеклоочистители"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Топливная система",
+                            "callback_data": "Топливная система"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Тормозная система",
+                            "callback_data": "Тормозная система"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Трансмиссия",
+                            "callback_data": "Трансмиссия"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Электрика",
+                            "callback_data": "Электрика"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Без группы",
+                            "callback_data": "Без группы"
+                        }
+                    ]
+                ]
+            }
+        },
+        "chat_instance": "6890459376004416835",
+        "data": "Электрика"
+    }
+}

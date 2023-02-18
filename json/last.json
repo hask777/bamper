@@ -1,7 +1,7 @@
 {
-    "update_id": 529582297,
+    "update_id": 529582508,
     "callback_query": {
-        "id": "5822967688019639067",
+        "id": "5822967688971979408",
         "from": {
             "id": 5650732610,
             "is_bot": false,
@@ -10,7 +10,7 @@
             "language_code": "ru"
         },
         "message": {
-            "message_id": 660,
+            "message_id": 905,
             "from": {
                 "id": 6026613178,
                 "is_bot": true,
@@ -23,7 +23,7 @@
                 "last_name": "Django",
                 "type": "private"
             },
-            "date": 1676721946,
+            "date": 1676744178,
             "text": "Chose brand",
             "reply_markup": {
                 "inline_keyboard": [
@@ -781,6 +781,6 @@
             }
         },
         "chat_instance": "6890459376004416835",
-        "data": "Skoda"
+        "data": "Smart"
     }
 }

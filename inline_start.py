@@ -5,15 +5,17 @@ from utils.utils import get_brands, get_keyboard, get_models, get_detail, get_ty
 from env import *
 import time
 
-def get_updates():
+arr = []
+
+main_dict = {}
+
+
+def get_updates(arr, main_dict):
     url = base_url+'getUpdates'
     getUp = requests.get(url).json()
     
     try:
         lats_update = getUp['result'][-2]['update_id']
-        # print(lats_update)
-        # with open('update.json', 'w', encoding='utf-8') as f:
-        #     json.dump(getUp, f, indent=4, ensure_ascii=False)
     except:
         return
 
@@ -24,26 +26,23 @@ def get_updates():
     url = base_url+'getUpdates?'
     getUp = requests.get(url, params=params).json()
 
-    # with open('json/update.json', 'w', encoding='utf-8') as f:
-    #     json.dump(getUp, f, indent=4, ensure_ascii=False)
-        
     try:
         if getUp['result'][0]['callback_query'] is not None:
-            update = getUp['result'][0]
-            
+            update = getUp['result'][0]  
     except:
         update = None
 
     try:
         if getUp['result'][0]['message']['text'] is not None:
             get_brands_butttons(getUp) 
-         
     except:
         if getUp['result'][0]['callback_query']['data'] in get_brands():
-            get_models_buttons(update)
+            get_models_buttons(update, arr, main_dict)
 
         else:
-           get_details_button(update) 
+            get_details_button(update, arr, main_dict) 
+ 
+            get_target_buttons(update)
   
 
 
@@ -71,24 +70,23 @@ def get_brands_butttons(request):
 
             return update
 
-def get_models_buttons(update):
+def get_models_buttons(update, main_, main_dict):
     if update is not None:
-        print(update['callback_query']['data'])
         with open('json/last.json', 'w', encoding='utf-8') as f:
             json.dump(update, f, indent=4, ensure_ascii=False)
 
         brand = update['callback_query']['data'].lower()
         brand = brand.replace(' ', '')
-        print(brand)
+
+        main_dict['brand'] = brand
+
+
+        print(main_dict)
 
         lats_update = update['update_id']
 
         send_message_url = base_url+'sendMessage?'
-        print(send_message_url)
-
-
         models = get_models(brand)
-        # print(get_models(brand))
 
         params = {
                     'chat_id':'5650732610',
@@ -103,34 +101,56 @@ def get_models_buttons(update):
     else:
         return
 
-def get_details_button(update):   
-    print(update['callback_query']['data'].lower())
+def get_details_button(update, main, main_dict):  
+    m_list =[]
 
-    model = update['callback_query']['data']
+    for upd in update['callback_query']['message']['reply_markup']['inline_keyboard']:
+        for up in upd:
+            m_list.append(up['text'])
+    print(m_list)
 
-    dt = get_detail(model)
-    print(dt)
+    if update['callback_query']['data'] in m_list:
+        model = update['callback_query']['data']
 
-    lats_update = update['update_id']
-    send_message_url = base_url+'sendMessage?'
+        main_dict['model'] = model
 
-    params = {
-                'chat_id':'5650732610',
-                'text': 'Выберете деталь',
-                'reply_markup': json.dumps({
-                'inline_keyboard': get_inline_keyboard(None, dt),
-                # 'resize_keyboard': True 
-        })
-    }
+        print(main_dict)
 
-    send_details = requests.get(send_message_url, params=params).json()
+        dt = get_detail(model)
 
-    print('this is get details')
+        lats_update = update['update_id']
+        send_message_url = base_url+'sendMessage?'
+
+        params = {
+                    'chat_id':'5650732610',
+                    'text': 'Выберете деталь',
+                    'reply_markup': json.dumps({
+                    'inline_keyboard': get_inline_keyboard(None, dt),
+                    # 'resize_keyboard': True 
+            })
+        }
+
+        send_details = requests.get(send_message_url, params=params).json()
+        
+    print(update['callback_query']['data'])
+    return update['callback_query']['data']
+
+    
+
+def get_target_buttons(update):
+    
+    with open('up.json', 'w', encoding='utf-8') as f:
+        json.dump(update, f, ensure_ascii=False, indent=4)
+
+
+
+
+
 
 
 
 def main():
-    get_updates()
+    get_updates(main, main_dict)
 
 while True:
     if __name__ == '__main__':
