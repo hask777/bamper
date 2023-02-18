@@ -1,7 +1,7 @@
 {
     "ok": true,
     "result": {
-        "message_id": 443,
+        "message_id": 660,
         "from": {
             "id": 6026613178,
             "is_bot": true,
@@ -14,7 +14,7 @@
             "last_name": "Django",
             "type": "private"
         },
-        "date": 1676553771,
+        "date": 1676721946,
         "text": "Chose brand",
         "reply_markup": {
             "inline_keyboard": [

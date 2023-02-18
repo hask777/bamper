@@ -41,12 +41,10 @@ def get_updates():
     except:
         if getUp['result'][0]['callback_query']['data'] in get_brands():
             get_models_buttons(update)
+
+        else:
+           get_details_button(update) 
   
-        try:
-            # print(update['callback_query']['data'])
-            get_details_button(update)
-        except:
-            print('no data')
 
 
 def get_brands_butttons(request):
