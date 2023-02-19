@@ -37,12 +37,11 @@ def get_updates(arr, main_dict):
             get_brands_butttons(getUp) 
     except:
         if getUp['result'][0]['callback_query']['data'] in get_brands():
-            get_models_buttons(update, arr, main_dict)
+            get_models_buttons(update , main_dict)
 
         else:
-            get_details_button(update, arr, main_dict) 
- 
-            get_target_buttons(update)
+            get_details_button(update, main_dict) 
+
   
 
 
@@ -70,7 +69,7 @@ def get_brands_butttons(request):
 
             return update
 
-def get_models_buttons(update, main_, main_dict):
+def get_models_buttons(update, main_dict):
     if update is not None:
         with open('json/last.json', 'w', encoding='utf-8') as f:
             json.dump(update, f, indent=4, ensure_ascii=False)
@@ -81,7 +80,7 @@ def get_models_buttons(update, main_, main_dict):
         main_dict['brand'] = brand
 
 
-        print(main_dict)
+        # print(main_dict)
 
         lats_update = update['update_id']
 
@@ -101,20 +100,22 @@ def get_models_buttons(update, main_, main_dict):
     else:
         return
 
-def get_details_button(update, main, main_dict):  
+def get_details_button(update, main_dict):  
     m_list =[]
 
     for upd in update['callback_query']['message']['reply_markup']['inline_keyboard']:
         for up in upd:
             m_list.append(up['text'])
-    print(m_list)
+    # print(m_list)
 
     if update['callback_query']['data'] in m_list:
         model = update['callback_query']['data']
 
-        main_dict['model'] = model
+        main_dict['model'] = model.split()[-1].lower()
+        main_dict['detail'] = update['callback_query']['data']
+        m_list.append(main_dict)
 
-        print(main_dict)
+        # print(main_dict)
 
         dt = get_detail(model)
 
@@ -131,21 +132,10 @@ def get_details_button(update, main, main_dict):
         }
 
         send_details = requests.get(send_message_url, params=params).json()
-        
-    print(update['callback_query']['data'])
-    return update['callback_query']['data']
-
     
-
-def get_target_buttons(update):
-    
-    with open('up.json', 'w', encoding='utf-8') as f:
-        json.dump(update, f, ensure_ascii=False, indent=4)
-
-
-
-
-
+    else:
+        # print(update['callback_query']['data'])
+        return update['callback_query']['data']
 
 
 

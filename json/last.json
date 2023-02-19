@@ -1,7 +1,7 @@
 {
-    "update_id": 529582508,
+    "update_id": 529582620,
     "callback_query": {
-        "id": "5822967688971979408",
+        "id": "5822967686739838390",
         "from": {
             "id": 5650732610,
             "is_bot": false,
@@ -10,7 +10,7 @@
             "language_code": "ru"
         },
         "message": {
-            "message_id": 905,
+            "message_id": 1042,
             "from": {
                 "id": 6026613178,
                 "is_bot": true,
@@ -23,7 +23,7 @@
                 "last_name": "Django",
                 "type": "private"
             },
-            "date": 1676744178,
+            "date": 1676803529,
             "text": "Chose brand",
             "reply_markup": {
                 "inline_keyboard": [

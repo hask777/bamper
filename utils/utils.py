@@ -42,7 +42,15 @@ def get_detail(model):
         links  = ul.find_all('li', class_='list-header')
 
         for a in links:
-            dt_.append(a.text)
+            link = a.find('a').get('href')
+            text = a.text
+
+            dtd = dict(
+                link = link,
+                text = text
+            )
+            # print(dtd)
+            dt_.append(dtd)
     # print(dt_)
 
     return dt_
@@ -88,8 +96,6 @@ def get_keyboard(func=None, models=None):
             keyboard.append(res)
         return keyboard
 
-
-
 def get_inline_keyboard(func=None, models=None):
     inl = []
 
@@ -104,10 +110,21 @@ def get_inline_keyboard(func=None, models=None):
 
     if models is not None:
         for model in models:
-            res = [{
-                'text': model,
-                'callback_data': model
-            }]
-            inl.append(res)
+
+
+            if type(model) == str:
+                res = [{
+                    'text': model,
+                    'callback_data': model
+                }]
+                inl.append(res)
+
+            else:
+                res = [{
+                    'text': model['text'],
+                    'callback_data': model['link']
+                }]
+                inl.append(res)
+
         return inl
 

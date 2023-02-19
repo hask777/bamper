@@ -1,7 +1,7 @@
 {
-    "update_id": 529582510,
+    "update_id": 529582618,
     "callback_query": {
-        "id": "5822967686185446784",
+        "id": "5822967685396629657",
         "from": {
             "id": 5650732610,
             "is_bot": false,
@@ -10,7 +10,7 @@
             "language_code": "ru"
         },
         "message": {
-            "message_id": 907,
+            "message_id": 1040,
             "from": {
                 "id": 6026613178,
                 "is_bot": true,
@@ -23,140 +23,110 @@
                 "last_name": "Django",
                 "type": "private"
             },
-            "date": 1676744188,
+            "date": 1676803379,
             "text": "Выберете деталь",
             "reply_markup": {
                 "inline_keyboard": [
                     [
                         {
-                            "text": "Аксессуары",
+                            "text": "/catalog/smart-coupe/group_aksessuary/",
                             "callback_data": "Аксессуары"
                         }
                     ],
                     [
                         {
-                            "text": "Аудио, видео, медиа",
-                            "callback_data": "Аудио, видео, медиа"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "Выхлопная система",
+                            "text": "/catalog/smart-coupe/group_vykhlopnaya-sistema/",
                             "callback_data": "Выхлопная система"
                         }
                     ],
                     [
                         {
-                            "text": "Двигатель",
+                            "text": "/catalog/smart-coupe/group_dvigatel/",
                             "callback_data": "Двигатель"
                         }
                     ],
                     [
                         {
-                            "text": "Диски",
+                            "text": "/catalog/smart-coupe/group_diski/",
                             "callback_data": "Диски"
                         }
                     ],
                     [
                         {
-                            "text": "Кузовщина",
+                            "text": "/catalog/smart-coupe/group_kuzov/",
                             "callback_data": "Кузовщина"
                         }
                     ],
                     [
                         {
-                            "text": "Оптика",
+                            "text": "/catalog/smart-coupe/group_optika/",
                             "callback_data": "Оптика"
                         }
                     ],
                     [
                         {
-                            "text": "Отопление и вентиляция",
+                            "text": "/catalog/smart-coupe/group_otopleniye-i-ventilyatsiya/",
                             "callback_data": "Отопление и вентиляция"
                         }
                     ],
                     [
                         {
-                            "text": "Пассивная безопасность",
-                            "callback_data": "Пассивная безопасность"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "Подвеска",
+                            "text": "/catalog/smart-coupe/group_podveska/",
                             "callback_data": "Подвеска"
                         }
                     ],
                     [
                         {
-                            "text": "Рулевое управление",
+                            "text": "/catalog/smart-coupe/group_rulevoe-upravlenie/",
                             "callback_data": "Рулевое управление"
                         }
                     ],
                     [
                         {
-                            "text": "Салон",
+                            "text": "/catalog/smart-coupe/group_salon/",
                             "callback_data": "Салон"
                         }
                     ],
                     [
                         {
-                            "text": "Система охлаждения",
+                            "text": "/catalog/smart-coupe/group_sistema-okhlazhdeniya/",
                             "callback_data": "Система охлаждения"
                         }
                     ],
                     [
                         {
-                            "text": "Системы комфорта",
-                            "callback_data": "Системы комфорта"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "Стекла",
+                            "text": "/catalog/smart-coupe/group_stekla/",
                             "callback_data": "Стекла"
                         }
                     ],
                     [
                         {
-                            "text": "Стеклоочистители",
+                            "text": "/catalog/smart-coupe/group_stekloochistiteli/",
                             "callback_data": "Стеклоочистители"
                         }
                     ],
                     [
                         {
-                            "text": "Топливная система",
-                            "callback_data": "Топливная система"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "Тормозная система",
+                            "text": "/catalog/smart-coupe/group_tormoznaya-sistema/",
                             "callback_data": "Тормозная система"
                         }
                     ],
                     [
                         {
-                            "text": "Трансмиссия",
+                            "text": "/catalog/smart-coupe/group_transmissiya/",
                             "callback_data": "Трансмиссия"
                         }
                     ],
                     [
                         {
-                            "text": "Электрика",
+                            "text": "/catalog/smart-coupe/group_elektrika/",
                             "callback_data": "Электрика"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "Без группы",
-                            "callback_data": "Без группы"
                         }
                     ]
                 ]
             }
         },
         "chat_instance": "6890459376004416835",
-        "data": "Электрика"
+        "data": "Отопление и вентиляция"
     }
 }
