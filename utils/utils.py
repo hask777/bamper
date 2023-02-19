@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+from env import *
 
 def get_brands():
     with open('json/br_list.json', 'r', encoding='utf-8') as f:
@@ -55,20 +56,29 @@ def get_detail(model):
 
     return dt_
 
-def get_type(detail=None, model=None):
+def get_type(url = None):
     dt_ = []
 
-    url = f"https://bamper.by/catalog/{model}/{detail}/"
+    url = 'https://bamper.by' + url
+    print(url)
 
     req = requests.get(url).text
 
     soup = BeautifulSoup(req, 'lxml')
     uls = soup.select('ul.cat-list.col-sm-6')
     for ul in uls:
-        links  = ul.find_all('li', class_='list-header')
+        links  = ul.find_all('li')
 
         for a in links:
-            dt_.append(a.text)
+            link = a.find('a').get('href')
+            text = a.text
+
+            dtd = dict(
+                link = link,
+                text = text
+            )
+            print(dtd)
+            dt_.append(dtd)
     # print(dt_)
 
     return dt_
