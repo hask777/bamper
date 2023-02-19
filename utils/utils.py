@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from env import *
+
 
 def get_brands():
     with open('json/br_list.json', 'r', encoding='utf-8') as f:
@@ -60,7 +60,7 @@ def get_type(url = None):
     dt_ = []
 
     url = 'https://bamper.by' + url
-    print(url)
+    # print(url)
 
     req = requests.get(url).text
 
@@ -77,11 +77,16 @@ def get_type(url = None):
                 link = link,
                 text = text
             )
-            print(dtd)
+            # print(dtd)
             dt_.append(dtd)
     # print(dt_)
 
     return dt_
+
+def get_suplies(request):
+    pass
+
+
 
 """
 KeyBoards
@@ -138,3 +143,17 @@ def get_inline_keyboard(func=None, models=None):
 
         return inl
 
+def detail_keyboard(details=None):
+    inl = []
+
+    if details is not None:
+        for detail in details:
+
+            res = [{
+                'text': detail['text'],
+                'callback_data': detail['link']
+            }]
+            
+    print(inl)
+
+    return inl

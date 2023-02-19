@@ -1,132 +1,38 @@
-{
-    "update_id": 529582618,
-    "callback_query": {
-        "id": "5822967685396629657",
-        "from": {
-            "id": 5650732610,
-            "is_bot": false,
-            "first_name": "Hask777",
-            "last_name": "Django",
-            "language_code": "ru"
-        },
-        "message": {
-            "message_id": 1040,
-            "from": {
-                "id": 6026613178,
-                "is_bot": true,
-                "first_name": "bamper777",
-                "username": "bamper777bot"
-            },
-            "chat": {
-                "id": 5650732610,
-                "first_name": "Hask777",
-                "last_name": "Django",
-                "type": "private"
-            },
-            "date": 1676803379,
-            "text": "Выберете деталь",
-            "reply_markup": {
-                "inline_keyboard": [
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_aksessuary/",
-                            "callback_data": "Аксессуары"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_vykhlopnaya-sistema/",
-                            "callback_data": "Выхлопная система"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_dvigatel/",
-                            "callback_data": "Двигатель"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_diski/",
-                            "callback_data": "Диски"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_kuzov/",
-                            "callback_data": "Кузовщина"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_optika/",
-                            "callback_data": "Оптика"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_otopleniye-i-ventilyatsiya/",
-                            "callback_data": "Отопление и вентиляция"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_podveska/",
-                            "callback_data": "Подвеска"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_rulevoe-upravlenie/",
-                            "callback_data": "Рулевое управление"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_salon/",
-                            "callback_data": "Салон"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_sistema-okhlazhdeniya/",
-                            "callback_data": "Система охлаждения"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_stekla/",
-                            "callback_data": "Стекла"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_stekloochistiteli/",
-                            "callback_data": "Стеклоочистители"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_tormoznaya-sistema/",
-                            "callback_data": "Тормозная система"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_transmissiya/",
-                            "callback_data": "Трансмиссия"
-                        }
-                    ],
-                    [
-                        {
-                            "text": "/catalog/smart-coupe/group_elektrika/",
-                            "callback_data": "Электрика"
-                        }
-                    ]
-                ]
-            }
-        },
-        "chat_instance": "6890459376004416835",
-        "data": "Отопление и вентиляция"
+[
+    {
+        "link": "/catalog/smart-forfour/group_toplivnaya-sistema/",
+        "text": "Топливная система"
+    },
+    {
+        "link": "/zchbu/zapchast_bak-toplivnyy/marka_smart/model_forfour/",
+        "text": "Бак топливный"
+    },
+    {
+        "link": "/zchbu/zapchast_gorlovina-toplivnogo-baka/marka_smart/model_forfour/",
+        "text": "Горловина топливного бака"
+    },
+    {
+        "link": "/zchbu/zapchast_datchik-urovnya-topliva/marka_smart/model_forfour/",
+        "text": "Датчик уровня топлива"
+    },
+    {
+        "link": "/zchbu/zapchast_zaslonka-drosselnaya/marka_smart/model_forfour/",
+        "text": "Заслонка дроссельная"
+    },
+    {
+        "link": "/zchbu/zapchast_nasos-toplivnyy/marka_smart/model_forfour/",
+        "text": "Насос топливный"
+    },
+    {
+        "link": "/zchbu/zapchast_probka-toplivnogo-baka/marka_smart/model_forfour/",
+        "text": "Пробка топливного бака"
+    },
+    {
+        "link": "/zchbu/zapchast_regulyator-davleniya-topliva/marka_smart/model_forfour/",
+        "text": "Регулятор давления топлива"
+    },
+    {
+        "link": "/zchbu/zapchast_toplivnaya-rampa/marka_smart/model_forfour/",
+        "text": "Топливная рампа"
     }
-}
+]

@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from utils.utils import get_brands, get_keyboard, get_models, get_detail, get_type, get_inline_keyboard
+from utils.utils import get_brands, get_keyboard, get_models, get_detail, get_type, get_inline_keyboard, detail_keyboard
 from env import *
 import time
 
@@ -10,7 +10,7 @@ arr = []
 main_dict = {}
 
 
-def get_updates(arr, main_dict):
+def get_updates():
     url = base_url+'getUpdates'
     getUp = requests.get(url).json()
     
@@ -44,17 +44,9 @@ def get_updates(arr, main_dict):
 
             try:
                 get_details(update)
-                
-            except:
-
-                try:
-                    get_items(update)
-                    
-                except:
-                    return
-
             
-
+            except:  
+                return
 
 def get_brands_butttons(request):
     if len(request['result']) > 0:
@@ -137,30 +129,53 @@ def get_details_list_button(update):
         }
 
         send_details = requests.get(send_message_url, params=params).json()
+
+        with open('up2.json', 'w', encoding='utf-8') as f:
+            json.dump(send_details, f, ensure_ascii=False, indent=4)
+        # print(send_details)
     
     else:
         return update['callback_query']['data']
 
 def get_details(update):
+    # print(update['callback_query']['data'])
 
-    dt_ = get_type(update['callback_query']['data'])
+    url = update['callback_query']['data']
+    
+    print(get_type(url))
+
+    dt = get_type(url)
 
     lats_update = update['update_id']
     send_message_url = base_url+'sendMessage?'
 
     params = {
-                'chat_id':'5650732610',
-                'text': 'Выберете деталь',
-                'reply_markup': json.dumps({
-                'inline_keyboard': get_inline_keyboard(None, dt_),
-                # 'resize_keyboard': True 
-        })
-    }
+                    'chat_id':'5650732610',
+                    'text': 'Выберете систему',
+                    'reply_markup': json.dumps({
+                    'inline_keyboard': detail_keyboard(dt),
+                    # 'resize_keyboard': True 
+            })
+        }
 
     send_details = requests.get(send_message_url, params=params).json()
+    print(len('/zchbu/zapchast_tsilindr-stsepleniya-glavnyy/marka_smart/model_forfour/'))
+
+
+    
 
 def get_items(update):
-    print(update['callback_query']['data'])
+    # print(update['callback_query']['data'])
+
+    url = f'https://bamper.by{update["callback_query"]["data"]}'
+
+    req = requests.get(url).text
+
+    soup = BeautifulSoup(req, 'lxml')
+    items = soup.find_all("div", class_="item-list")
+
+    for item in items:
+        print(item)
 
 
 
@@ -169,7 +184,7 @@ def get_items(update):
 
 
 def main():
-    get_updates(main, main_dict)
+    get_updates()
 
 while True:
     if __name__ == '__main__':
