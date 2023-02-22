@@ -83,8 +83,16 @@ def get_type(url = None):
 
     return dt_
 
-def get_suplies(request):
-    pass
+def get_suplies():
+    url = f'https://bamper.by/zchbu/zapchast_cd-cheyndzher/marka_acura/model_cl/'
+
+    req = requests.get(url).text
+
+    soup = BeautifulSoup(req, 'lxml')
+    items = soup.find_all("div", class_="item-list")
+
+    for item in items:
+        print(item)
 
 
 
