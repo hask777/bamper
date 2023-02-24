@@ -83,32 +83,63 @@ def get_type(url = None):
 
     return dt_
 
-def get_suplies():
-    itarr = []
-    url = f'https://bamper.by/zchbu/zapchast_cd-cheyndzher/marka_acura/model_cl/'
+def get_suplies(url):
+    req  = requests.get(f'https://bamper.by{url}').text
+    # print(req)
 
-    req = requests.get(url).text
+    sup = []
 
     soup = BeautifulSoup(req, 'lxml')
-    items = soup.find_all("div", class_="item-list")
+    uls = soup.select('ul.cat-list.col-sm-6')
+    for ul in uls:
+        links  = ul.find_all('li')
 
-    for item in items:
-        # print(item)
-        img = item.find('img').get('src')
-        link = item.find('a').get('href')
-        title = item.find('h5').text
+        for a in links:
+            link = a.find('a').get('href')
+            text = a.text
 
-        print(title)
+            dtd = dict(
+                link = link,
+                text = text
+            )
+            # print(dtd)
+            sup.append(dtd)
+    
 
-        itdic = dict(
-            img = img,
-            link = link,
-            title = title.strip()
-        )
+    del sup[0]
 
-        itarr.append(itdic)
+    print(sup)
 
-    return itarr
+    return sup
+
+
+
+
+    # itarr = []
+    # url = f'https://bamper.by/zchbu/zapchast_cd-cheyndzher/marka_acura/model_cl/'
+
+    # req = requests.get(url).text
+
+    # soup = BeautifulSoup(req, 'lxml')
+    # items = soup.find_all("div", class_="item-list")
+
+    # for item in items:
+    #     # print(item)
+    #     img = item.find('img').get('src')
+    #     link = item.find('a').get('href')
+    #     title = item.find('h5').text
+
+    #     print(title)
+
+    #     itdic = dict(
+    #         img = img,
+    #         link = link,
+    #         title = title.strip()
+    #     )
+
+    #     itarr.append(itdic)
+
+    # return itarr
 
 
 """

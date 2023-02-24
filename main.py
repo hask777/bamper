@@ -32,16 +32,15 @@ def get_details_list_():
     return details
 
 
-# @app.get('/detail')
-# def get_details_list_():
-#     detail = get_type("/catalog/acura-cl/group_audio-video-media/")
-#     models.append(detail)
-#     return detail
+@app.post('/suplies')
+def post_suplies(item: Car):
+    print(item)
+    m_dict['suplies'] = item.title
+    return m_dict
 
 
-# @app.get('/detail')
-# def get_result():
-#     sup = get_suplies()
-#     models.append(sup)
-#     return sup
+@app.get('/suplies')
+def get_suplies_list():
+    suplies = get_suplies(m_dict['suplies'])
+    return suplies
 

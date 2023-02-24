@@ -42,6 +42,8 @@ def get_updates():
 
         else:
             get_details_list_button(update)
+
+            
             
 
 def get_brands_buttons(request):
@@ -122,7 +124,7 @@ def get_details_list_button(update):
         }
 
         req = requests.post(url,  data = json.dumps(params)).text
-        print(req)
+        # print(req)
 
         dt =  requests.get('http://127.0.0.1:8000/details').json()
 
@@ -141,10 +143,54 @@ def get_details_list_button(update):
         send_details = requests.get(send_message_url, params=params).json()
 
     else:
+        get_suplies(update)
         return update['callback_query']['data']
 
-def get_suplies():
-    pass
+def get_suplies(update):
+    # print(update['callback_query']['data'])
+
+    suplies = update['callback_query']['data']
+
+    url = 'http://127.0.0.1:8000/suplies'
+
+    params = {
+        'title': suplies
+    }
+
+    req = requests.post(url,  data = json.dumps(params)).text
+
+    spl =  requests.get('http://127.0.0.1:8000/suplies').json()
+
+    print(spl)
+
+    lats_update = update['update_id']
+    send_message_url = base_url+'sendMessage?'
+
+    params = {
+                    'chat_id':'5650732610',
+                    'text': 'Выберете деталь',
+                    'reply_markup': json.dumps({
+                    'inline_keyboard': get_inline_keyboard(None, spl),
+                    # 'resize_keyboard': True 
+        })
+    }
+
+    send_suplies = requests.get(send_message_url, params=params).json()
+
+    with open('suplies.json', 'w', encoding='utf-8') as f:
+        json.dump(send_suplies, f, indent=4, ensure_ascii=False)
+   
+
+  
+
+
+
+
+
+
+
+
+
 
 def main():
     get_updates()
