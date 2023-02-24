@@ -1,5 +1,5 @@
 from pydantic import BaseModel
 from datetime import date
 
-class Book(BaseModel):
+class Car(BaseModel):
     title: str

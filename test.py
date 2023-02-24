@@ -5,7 +5,7 @@ import json
 
 def get_items():
   
-    url = f'http://127.0.0.1:8000/book'
+    url = f'http://127.0.0.1:8000/brand'
 
     headers = {
         'Content-Type': 'application/json',

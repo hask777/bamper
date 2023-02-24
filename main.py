@@ -1,43 +1,47 @@
 from fastapi import FastAPI
-from schemas import Book
+from schemas import Car
 
 from utils.utils import *
 
-models = []
+m_dict = {}
 
 app = FastAPI()
 
 
-@app.post('/brand')
-def get_brand(item: Book):
-    models.append(item)
-    return models
+@app.post('/models')
+def get_brand(item: Car):
+    m_dict['brand'] = item.title
+    return m_dict
 
 
 @app.get('/models')
 def get_models_list():
-    print(models[0].title)
-    modelss = get_models(models[0].title)
-    models.append(modelss)
-    return modelss
+    models = get_models(m_dict['brand'])
+    return models
+
+
+@app.post('/details')
+def post_details(item: Car):
+    m_dict['model'] = item.title
+    return m_dict
 
 
 @app.get('/details')
 def get_details_list_():
-    details = get_detail('acura-cl')
-    models.append(details)
+    details = get_detail(m_dict['model'])
     return details
 
 
-@app.get('/detail')
-def get_details_list_():
-    detail = get_type("/catalog/acura-cl/group_audio-video-media/")
-    models.append(detail)
-    return detail
+# @app.get('/detail')
+# def get_details_list_():
+#     detail = get_type("/catalog/acura-cl/group_audio-video-media/")
+#     models.append(detail)
+#     return detail
 
-@app.get('/result')
-def get_result():
-    sup = get_suplies()
-    models.append(sup)
-    return sup
+
+# @app.get('/detail')
+# def get_result():
+#     sup = get_suplies()
+#     models.append(sup)
+#     return sup
 

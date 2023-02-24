@@ -84,6 +84,7 @@ def get_type(url = None):
     return dt_
 
 def get_suplies():
+    itarr = []
     url = f'https://bamper.by/zchbu/zapchast_cd-cheyndzher/marka_acura/model_cl/'
 
     req = requests.get(url).text
@@ -92,8 +93,22 @@ def get_suplies():
     items = soup.find_all("div", class_="item-list")
 
     for item in items:
-        print(item)
+        # print(item)
+        img = item.find('img').get('src')
+        link = item.find('a').get('href')
+        title = item.find('h5').text
 
+        print(title)
+
+        itdic = dict(
+            img = img,
+            link = link,
+            title = title.strip()
+        )
+
+        itarr.append(itdic)
+
+    return itarr
 
 
 """
