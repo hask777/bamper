@@ -108,7 +108,7 @@ def get_suplies(url):
 
     del sup[0]
 
-    print(sup)
+    # print(sup)
 
     return sup
 

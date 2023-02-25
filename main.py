@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from schemas import Car
+import zlib
+import base64
 
 from utils.utils import *
 
@@ -41,6 +43,28 @@ def post_suplies(item: Car):
 
 @app.get('/suplies')
 def get_suplies_list():
+
+    sup_arr = []
+    sup_d = {}
     suplies = get_suplies(m_dict['suplies'])
+
+    for sup in suplies:
+
+        try:
+            if len(sup['text'].encode('utf-8')) < 64:
+                sup['text'] = sup['text']  
+
+        except:
+
+            if len(sup['text'].encode('utf-8')) > 64: 
+                sup['text'] = sup['text'].split()
+                sup['text'] = sup['text'][0] + ' ' + sup['text'][1]
+            else:
+                sup['text'] = sup['text'][0]
+
+
+        sup['link'] = sup['link'].split('/')
+        sup['link'] = sup['link'][2]
+
     return suplies
 
