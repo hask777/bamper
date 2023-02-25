@@ -1,7 +1,7 @@
 {
     "ok": true,
     "result": {
-        "message_id": 1911,
+        "message_id": 1939,
         "from": {
             "id": 6026613178,
             "is_bot": true,
@@ -14,122 +14,212 @@
             "last_name": "Django",
             "type": "private"
         },
-        "date": 1677341648,
+        "date": 1677349449,
         "text": "Выберете деталь",
         "reply_markup": {
             "inline_keyboard": [
                 [
                     {
-                        "text": "Актуатор сцепления",
-                        "callback_data": "zapchast_aktuator-stsepleniya"
+                        "text": "Блок Bluetooth",
+                        "callback_data": "zapchast_blok-bluetooth"
                     }
                 ],
                 [
                     {
-                        "text": "Блок управления АКПП",
-                        "callback_data": "zapchast_blok-upravleniya-akpp"
+                        "text": "Блок BSM",
+                        "callback_data": "zapchast_blok-bsm"
                     }
                 ],
                 [
                     {
-                        "text": "Диск сцепления",
-                        "callback_data": "zapchast_disk-stsepleniya"
+                        "text": "Блок SAM",
+                        "callback_data": "zapchast_blok-sam"
                     }
                 ],
                 [
                     {
-                        "text": "Комплект сцепления",
-                        "callback_data": "zapchast_komplekt-stsepleniya"
+                        "text": "Блок комфорта",
+                        "callback_data": "zapchast_blok-komforta"
                     }
                 ],
                 [
                     {
-                        "text": "Корзина сцепления",
-                        "callback_data": "zapchast_korzina-stsepleniya"
+                        "text": "Блок предохранителей",
+                        "callback_data": "zapchast_blok-predokhraniteley"
                     }
                 ],
                 [
                     {
-                        "text": "КПП автоматическая (АКПП)",
-                        "callback_data": "zapchast_kpp-avtomaticheskaya-akpp"
+                        "text": "Блок реле",
+                        "callback_data": "zapchast_blok-rele"
                     }
                 ],
                 [
                     {
-                        "text": "КПП механическая (МКПП)",
-                        "callback_data": "zapchast_kpp-mekhanicheskaya-mkpp"
+                        "text": "Блок управления (другие)",
+                        "callback_data": "zapchast_blok-upravleniya-drugie"
                     }
                 ],
                 [
                     {
-                        "text": "КПП механическая (МКПП) 5-ступенчатая",
-                        "callback_data": "zapchast_kpp-mekhanicheskaya-mkpp-5-stupenchataya"
+                        "text": "Блок управления ESP",
+                        "callback_data": "zapchast_blok-upravleniya-esp"
                     }
                 ],
                 [
                     {
-                        "text": "КПП роботизированная",
-                        "callback_data": "zapchast_kpp-robotizirovannaya"
+                        "text": "Блок управления зеркалами",
+                        "callback_data": "zapchast_blok-upravleniya-zerkalami"
                     }
                 ],
                 [
                     {
-                        "text": "Кулиса",
-                        "callback_data": "zapchast_kulisa"
+                        "text": "Высоковольтная батарея",
+                        "callback_data": "zapchast_vysokovoltnaya-batareya"
                     }
                 ],
                 [
                     {
-                        "text": "Маховик АКПП (драйв плата)",
-                        "callback_data": "zapchast_makhovik-akpp-drayv-plata"
+                        "text": "Генератор",
+                        "callback_data": "zapchast_generator"
                     }
                 ],
                 [
                     {
-                        "text": "Подушка крепления КПП",
-                        "callback_data": "zapchast_podushka-krepleniya-kpp"
+                        "text": "Датчик (прочие)",
+                        "callback_data": "zapchast_datchik-prochie"
                     }
                 ],
                 [
                     {
-                        "text": "Полуось задняя (приводной вал, ШРУС)",
-                        "callback_data": "zapchast_poluos-zadnyaya-privodnoy-val-shrus"
+                        "text": "Датчик ускорения",
+                        "callback_data": "zapchast_datchik-uskoreniya"
                     }
                 ],
                 [
                     {
-                        "text": "Полуось передняя левая (приводной вал, ШРУС)",
-                        "callback_data": "zapchast_poluos-perednyaya-levaya-privodnoy-val-shrus"
+                        "text": "Замок зажигания",
+                        "callback_data": "zapchast_zamok-zazhiganiya"
                     }
                 ],
                 [
                     {
-                        "text": "Полуось передняя правая (приводной вал, ШРУС)",
-                        "callback_data": "zapchast_poluos-perednyaya-pravaya-privodnoy-val-shrus"
+                        "text": "Зарядное устройство (кабель зарядный)",
+                        "callback_data": "zapchast_zaryadnoe-ustroystvo-kabel-zaryadnyy"
                     }
                 ],
                 [
                     {
-                        "text": "Селектор АКПП",
-                        "callback_data": "zapchast_selektor-akpp"
+                        "text": "Катушка зажигания",
+                        "callback_data": "zapchast_katushka-zazhiganiya"
                     }
                 ],
                 [
                     {
-                        "text": "Трос кулисы КПП",
-                        "callback_data": "zapchast_tros-kulisy-kpp"
+                        "text": "Контактная группа",
+                        "callback_data": "zapchast_kontaktnaya-gruppa"
                     }
                 ],
                 [
                     {
-                        "text": "Цепь",
-                        "callback_data": "zapchast_tsep"
+                        "text": "Кронштейн генератора",
+                        "callback_data": "zapchast_kronshteyn-generatora"
                     }
                 ],
                 [
                     {
-                        "text": "ШРУС наружный",
-                        "callback_data": "zapchast_shrus-naruzhnyy"
+                        "text": "Лямбда-зонд",
+                        "callback_data": "zapchast_lyambda-zond"
+                    }
+                ],
+                [
+                    {
+                        "text": "Переключатель дворников",
+                        "callback_data": "zapchast_pereklyuchatel-dvornikov"
+                    }
+                ],
+                [
+                    {
+                        "text": "Переключатель поворотов",
+                        "callback_data": "zapchast_pereklyuchatel-povorotov"
+                    }
+                ],
+                [
+                    {
+                        "text": "Переключатель подрулевой (стрекоза)",
+                        "callback_data": "zapchast_pereklyuchatel-podrulevoy-strekoza"
+                    }
+                ],
+                [
+                    {
+                        "text": "Переходник для зарядки",
+                        "callback_data": "zapchast_perekhodnik-dlya-zaryadki"
+                    }
+                ],
+                [
+                    {
+                        "text": "Провод высоковольтный",
+                        "callback_data": "zapchast_provod-vysokovoltnyy"
+                    }
+                ],
+                [
+                    {
+                        "text": "Проводка",
+                        "callback_data": "zapchast_provodka"
+                    }
+                ],
+                [
+                    {
+                        "text": "Проводка двигателя",
+                        "callback_data": "zapchast_provodka-dvigatelya"
+                    }
+                ],
+                [
+                    {
+                        "text": "Проводка крышки багажника",
+                        "callback_data": "zapchast_provodka-kryshki-bagazhnika"
+                    }
+                ],
+                [
+                    {
+                        "text": "Расходомер воздуха",
+                        "callback_data": "zapchast_raskhodomer-vozdukha"
+                    }
+                ],
+                [
+                    {
+                        "text": "Реле (прочие)",
+                        "callback_data": "zapchast_rele-prochie"
+                    }
+                ],
+                [
+                    {
+                        "text": "Реле накала свечей",
+                        "callback_data": "zapchast_rele-nakala-svechey"
+                    }
+                ],
+                [
+                    {
+                        "text": "Розетка зарядки автомобиля",
+                        "callback_data": "zapchast_rozetka-zaryadki-avtomobilya"
+                    }
+                ],
+                [
+                    {
+                        "text": "Сигнал (клаксон)",
+                        "callback_data": "zapchast_signal-klakson"
+                    }
+                ],
+                [
+                    {
+                        "text": "Стартер",
+                        "callback_data": "zapchast_starter"
+                    }
+                ],
+                [
+                    {
+                        "text": "Электропривод",
+                        "callback_data": "zapchast_elektroprivod"
                     }
                 ]
             ]

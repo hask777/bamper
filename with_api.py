@@ -44,6 +44,11 @@ def get_updates():
             get_details_list_button(update)
 
             
+            if update['callback_query']['data'] is not None:
+                get_items_list(update)
+            
+
+            
             
 
 def get_brands_buttons(request):
@@ -158,29 +163,33 @@ def get_suplies(update):
     }
 
     req = requests.post(url,  data = json.dumps(params)).text
+    
+    try:
+        spl =  requests.get('http://127.0.0.1:8000/suplies').json()
 
-    spl =  requests.get('http://127.0.0.1:8000/suplies').json()
+        print(spl)
 
-    print(spl)
+        lats_update = update['update_id']
+        send_message_url = base_url+'sendMessage?'
 
-    lats_update = update['update_id']
-    send_message_url = base_url+'sendMessage?'
+        params = {
+                        'chat_id':'5650732610',
+                        'text': 'Выберете деталь',
+                        'reply_markup': json.dumps({
+                        'inline_keyboard': get_inline_keyboard(None, spl),
+                        # 'resize_keyboard': True 
+            })
+        }
 
-    params = {
-                    'chat_id':'5650732610',
-                    'text': 'Выберете деталь',
-                    'reply_markup': json.dumps({
-                    'inline_keyboard': get_inline_keyboard(None, spl),
-                    # 'resize_keyboard': True 
-        })
-    }
+        send_suplies = requests.get(send_message_url, params=params).json()
 
-    send_suplies = requests.get(send_message_url, params=params).json()
-
-    with open('suplies.json', 'w', encoding='utf-8') as f:
-        json.dump(send_suplies, f, indent=4, ensure_ascii=False)
+        with open('suplies.json', 'w', encoding='utf-8') as f:
+            json.dump(send_suplies, f, indent=4, ensure_ascii=False)
+    except:
+        return
    
-
+def get_items_list(update):
+    print(update['callback_query']['data'])
   
 
 

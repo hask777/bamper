@@ -1,8 +1,5 @@
 from fastapi import FastAPI
 from schemas import Car
-import zlib
-import base64
-
 from utils.utils import *
 
 m_dict = {}
