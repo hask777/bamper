@@ -61,7 +61,17 @@ def get_suplies_list():
 
 
         sup['link'] = sup['link'].split('/')
-        sup['link'] = sup['link'][2]
 
     return suplies
 
+@app.post('/zapchast')
+def post_items_list(item: Car):
+    print(item)
+    m_dict['zapchast'] = item.title
+    return m_dict
+
+@app.get('/zapchast')
+def get_items_list():
+    items = get_items(m_dict['zapchast'])
+
+    return items

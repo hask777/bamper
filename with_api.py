@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from utils.utils import get_brands, get_keyboard, get_models, get_detail, get_type, get_inline_keyboard, detail_keyboard
+from utils.utils import get_brands, get_keyboard, get_models, get_detail, get_type, get_inline_keyboard
 from env import *
 import time
 
@@ -189,7 +189,19 @@ def get_suplies(update):
         return
    
 def get_items_list(update):
-    print(update['callback_query']['data'])
+    # print(update['callback_query']['data'])
+
+    zapchast = update['callback_query']['data']
+
+    url = 'http://127.0.0.1:8000/zapchast'
+
+    params = {
+        'title': zapchast
+    }
+
+    req = requests.post(url,  data = json.dumps(params)).text
+
+
   
 
 

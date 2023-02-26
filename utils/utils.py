@@ -113,33 +113,32 @@ def get_suplies(url):
     return sup
 
 
+def get_items(url):
+    itarr = []
+    url = f'https://bamper.by/zchbu/{url}/marka_acura/model_cl/'
 
+    req = requests.get(url).text
 
-    # itarr = []
-    # url = f'https://bamper.by/zchbu/zapchast_cd-cheyndzher/marka_acura/model_cl/'
+    soup = BeautifulSoup(req, 'lxml')
+    items = soup.find_all("div", class_="item-list")
 
-    # req = requests.get(url).text
+    for item in items:
+        # print(item)
+        img = item.find('img').get('src')
+        link = item.find('a').get('href')
+        title = item.find('h5').text
 
-    # soup = BeautifulSoup(req, 'lxml')
-    # items = soup.find_all("div", class_="item-list")
+        print(title)
 
-    # for item in items:
-    #     # print(item)
-    #     img = item.find('img').get('src')
-    #     link = item.find('a').get('href')
-    #     title = item.find('h5').text
+        itdic = dict(
+            img = img,
+            link = link,
+            title = title.strip()
+        )
 
-    #     print(title)
+        itarr.append(itdic)
 
-    #     itdic = dict(
-    #         img = img,
-    #         link = link,
-    #         title = title.strip()
-    #     )
-
-    #     itarr.append(itdic)
-
-    # return itarr
+    return itarr
 
 
 """
@@ -197,7 +196,6 @@ def get_inline_keyboard(func=None, models=None):
 
         return inl
 
-def detail_keyboard(details=None):
     inl = []
 
     if details is not None:
