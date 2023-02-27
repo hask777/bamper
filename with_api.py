@@ -189,7 +189,7 @@ def get_suplies(update):
         return
    
 def get_items_list(update):
-    # print(update['callback_query']['data'])
+    print(update['callback_query']['data'])
 
     zapchast = update['callback_query']['data']
 

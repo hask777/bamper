@@ -113,9 +113,14 @@ def get_suplies(url):
     return sup
 
 
-def get_items(url):
+def get_items(m_dict):
+
+    zpch = m_dict['zapchast']
+    brand = m_dict['brand']
+    model = m_dict['model']
+
     itarr = []
-    url = f'https://bamper.by/zchbu/{url}/marka_acura/model_cl/'
+    url = f'https://bamper.by/zchbu/{zpch}/marka_{brand}/model_{model}/'
 
     req = requests.get(url).text
 

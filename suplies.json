@@ -1,5 +1,228 @@
 {
-    "ok": false,
-    "error_code": 400,
-    "description": "Bad Request: can't parse inline keyboard button: Field \"callback_data\" must be of type String"
+    "ok": true,
+    "result": {
+        "message_id": 2109,
+        "from": {
+            "id": 6026613178,
+            "is_bot": true,
+            "first_name": "bamper777",
+            "username": "bamper777bot"
+        },
+        "chat": {
+            "id": 5650732610,
+            "first_name": "Hask777",
+            "last_name": "Django",
+            "type": "private"
+        },
+        "date": 1677489564,
+        "text": "Выберете деталь",
+        "reply_markup": {
+            "inline_keyboard": [
+                [
+                    {
+                        "text": "Блок Bluetooth",
+                        "callback_data": "zapchast_blok-bluetooth"
+                    }
+                ],
+                [
+                    {
+                        "text": "Блок BSM",
+                        "callback_data": "zapchast_blok-bsm"
+                    }
+                ],
+                [
+                    {
+                        "text": "Блок SAM",
+                        "callback_data": "zapchast_blok-sam"
+                    }
+                ],
+                [
+                    {
+                        "text": "Блок комфорта",
+                        "callback_data": "zapchast_blok-komforta"
+                    }
+                ],
+                [
+                    {
+                        "text": "Блок предохранителей",
+                        "callback_data": "zapchast_blok-predokhraniteley"
+                    }
+                ],
+                [
+                    {
+                        "text": "Блок реле",
+                        "callback_data": "zapchast_blok-rele"
+                    }
+                ],
+                [
+                    {
+                        "text": "Блок управления (другие)",
+                        "callback_data": "zapchast_blok-upravleniya-drugie"
+                    }
+                ],
+                [
+                    {
+                        "text": "Блок управления ESP",
+                        "callback_data": "zapchast_blok-upravleniya-esp"
+                    }
+                ],
+                [
+                    {
+                        "text": "Блок управления зеркалами",
+                        "callback_data": "zapchast_blok-upravleniya-zerkalami"
+                    }
+                ],
+                [
+                    {
+                        "text": "Высоковольтная батарея",
+                        "callback_data": "zapchast_vysokovoltnaya-batareya"
+                    }
+                ],
+                [
+                    {
+                        "text": "Генератор",
+                        "callback_data": "zapchast_generator"
+                    }
+                ],
+                [
+                    {
+                        "text": "Датчик (прочие)",
+                        "callback_data": "zapchast_datchik-prochie"
+                    }
+                ],
+                [
+                    {
+                        "text": "Датчик ускорения",
+                        "callback_data": "zapchast_datchik-uskoreniya"
+                    }
+                ],
+                [
+                    {
+                        "text": "Замок зажигания",
+                        "callback_data": "zapchast_zamok-zazhiganiya"
+                    }
+                ],
+                [
+                    {
+                        "text": "Зарядное устройство (кабель зарядный)",
+                        "callback_data": "zapchast_zaryadnoe-ustroystvo-kabel-zaryadnyy"
+                    }
+                ],
+                [
+                    {
+                        "text": "Катушка зажигания",
+                        "callback_data": "zapchast_katushka-zazhiganiya"
+                    }
+                ],
+                [
+                    {
+                        "text": "Контактная группа",
+                        "callback_data": "zapchast_kontaktnaya-gruppa"
+                    }
+                ],
+                [
+                    {
+                        "text": "Кронштейн генератора",
+                        "callback_data": "zapchast_kronshteyn-generatora"
+                    }
+                ],
+                [
+                    {
+                        "text": "Лямбда-зонд",
+                        "callback_data": "zapchast_lyambda-zond"
+                    }
+                ],
+                [
+                    {
+                        "text": "Переключатель дворников",
+                        "callback_data": "zapchast_pereklyuchatel-dvornikov"
+                    }
+                ],
+                [
+                    {
+                        "text": "Переключатель поворотов",
+                        "callback_data": "zapchast_pereklyuchatel-povorotov"
+                    }
+                ],
+                [
+                    {
+                        "text": "Переключатель подрулевой (стрекоза)",
+                        "callback_data": "zapchast_pereklyuchatel-podrulevoy-strekoza"
+                    }
+                ],
+                [
+                    {
+                        "text": "Переходник для зарядки",
+                        "callback_data": "zapchast_perekhodnik-dlya-zaryadki"
+                    }
+                ],
+                [
+                    {
+                        "text": "Провод высоковольтный",
+                        "callback_data": "zapchast_provod-vysokovoltnyy"
+                    }
+                ],
+                [
+                    {
+                        "text": "Проводка",
+                        "callback_data": "zapchast_provodka"
+                    }
+                ],
+                [
+                    {
+                        "text": "Проводка двигателя",
+                        "callback_data": "zapchast_provodka-dvigatelya"
+                    }
+                ],
+                [
+                    {
+                        "text": "Проводка крышки багажника",
+                        "callback_data": "zapchast_provodka-kryshki-bagazhnika"
+                    }
+                ],
+                [
+                    {
+                        "text": "Расходомер воздуха",
+                        "callback_data": "zapchast_raskhodomer-vozdukha"
+                    }
+                ],
+                [
+                    {
+                        "text": "Реле (прочие)",
+                        "callback_data": "zapchast_rele-prochie"
+                    }
+                ],
+                [
+                    {
+                        "text": "Реле накала свечей",
+                        "callback_data": "zapchast_rele-nakala-svechey"
+                    }
+                ],
+                [
+                    {
+                        "text": "Розетка зарядки автомобиля",
+                        "callback_data": "zapchast_rozetka-zaryadki-avtomobilya"
+                    }
+                ],
+                [
+                    {
+                        "text": "Сигнал (клаксон)",
+                        "callback_data": "zapchast_signal-klakson"
+                    }
+                ],
+                [
+                    {
+                        "text": "Стартер",
+                        "callback_data": "zapchast_starter"
+                    }
+                ],
+                [
+                    {
+                        "text": "Электропривод",
+                        "callback_data": "zapchast_elektroprivod"
+                    }
+                ]
+            ]
+        }
+    }
 }
