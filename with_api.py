@@ -7,7 +7,6 @@ import time
 
 
 arr = []
-
 main_dict = {}
 
 
@@ -202,7 +201,39 @@ def get_items_list(update):
     req = requests.post(url,  data = json.dumps(params)).text
 
 
-  
+    # get items
+
+    url = 'http://127.0.0.1:8000/zapchast'
+
+    items = requests.get(url).json()
+
+    print(items)
+
+    try:
+
+        for item in items:
+            img = item['img']
+            link = item['link']
+            title = item['title']
+
+            lats_update = update['update_id']
+            send_message_url = base_url+'sendMessage?'
+
+            params = {
+                        'chat_id':'5650732610',
+                        'text': f'{title}\n{link}\nhttps://bamper.by/{img}',
+                    }
+            
+            send_items = requests.get(send_message_url, params=params).json()
+    except:
+        return
+    
+# Make keyboard with button Следить
+    
+# read from database if database is not empty else read db
+# check ids if new ids or title is new
+
+    
 
 
 
