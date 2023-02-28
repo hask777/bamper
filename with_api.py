@@ -1,13 +1,16 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from utils.utils import get_brands, get_keyboard, get_models, get_detail, get_type, get_inline_keyboard
+from utils.utils import *
 from env import *
 import time
 
 
 arr = []
 main_dict = {}
+
+# make start
+# make delete message
 
 
 def get_updates():
@@ -166,7 +169,7 @@ def get_suplies(update):
     try:
         spl =  requests.get('http://127.0.0.1:8000/suplies').json()
 
-        print(spl)
+        # print(spl)
 
         lats_update = update['update_id']
         send_message_url = base_url+'sendMessage?'
@@ -188,7 +191,8 @@ def get_suplies(update):
         return
    
 def get_items_list(update):
-    print(update['callback_query']['data'])
+    # print(update['callback_query']['data'])
+    all_items = []
 
     zapchast = update['callback_query']['data']
 
@@ -202,12 +206,12 @@ def get_items_list(update):
 
 
     # get items
+    try:
+        url = 'http://127.0.0.1:8000/zapchast'
 
-    url = 'http://127.0.0.1:8000/zapchast'
-
-    items = requests.get(url).json()
-
-    print(items)
+        items = requests.get(url).json()
+    except:
+        return
 
     try:
 
@@ -225,13 +229,51 @@ def get_items_list(update):
                     }
             
             send_items = requests.get(send_message_url, params=params).json()
+
+        check_items(items,url)
+
     except:
         return
+       
+
+def check_items(items, url):
+    its = []
+    if items is not None:
+        
+        check_items = requests.get(url).json()
+
+        for it in items:
+            # it['title']
+            its.append(it['title'])
+        # print(its)
+
+        for item in check_items:
+            # print(item['title'])
+            if item['title'] not in its:
+                print(item)
+
+                img = item['img']
+                link = item['link']
+                title = item['title']
+
+                send_message_url = base_url+'sendMessage?'
+
+                params = {
+                            'chat_id':'5650732610',
+                            'text': f'{title}\n{link}\nhttps://bamper.by/{img}',
+                        }
+                
+                send_items = requests.get(send_message_url, params=params).json()
+            else:
+                print('not new details')
+    
     
 # Make keyboard with button Следить
     
 # read from database if database is not empty else read db
 # check ids if new ids or title is new
+
+# make Back
 
     
 
