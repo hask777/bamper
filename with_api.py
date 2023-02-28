@@ -47,7 +47,8 @@ def get_updates():
                 get_items_list(update)
             
 
-            
+def start():
+    pass           
             
 
 def get_brands_buttons(request):
@@ -188,7 +189,7 @@ def get_suplies(update):
         return
    
 def get_items_list(update):
-    print(update['callback_query']['data'])
+    # print(update['callback_query']['data'])
 
     zapchast = update['callback_query']['data']
 
@@ -207,7 +208,9 @@ def get_items_list(update):
 
     items = requests.get(url).json()
 
-    print(items)
+    # print(items)
+
+    all_items = []
 
     try:
 
@@ -225,8 +228,17 @@ def get_items_list(update):
                     }
             
             send_items = requests.get(send_message_url, params=params).json()
+
+            all_items.append(send_items)
+        
+        with open('items.json', 'w', encoding='utf-8') as f:
+            json.dump(all_items, f, ensure_ascii=False, indent=4)
+
+           
     except:
         return
+    
+   
     
 # Make keyboard with button Следить
     

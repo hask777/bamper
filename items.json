@@ -1,0 +1,98 @@
+[
+    {
+        "ok": true,
+        "result": {
+            "message_id": 2248,
+            "from": {
+                "id": 6026613178,
+                "is_bot": true,
+                "first_name": "bamper777",
+                "username": "bamper777bot"
+            },
+            "chat": {
+                "id": 5650732610,
+                "first_name": "Hask777",
+                "last_name": "Django",
+                "type": "private"
+            },
+            "date": 1677572253,
+            "text": "178047 Трос кулисы КПП  к Smart Forfour, 2004 г.\n/zapchast_tros-kulisy-kpp/189648-900575126/\nhttps://bamper.by//upload/photos_import/946/9462a9d3a58d57a12359bedae9ede121.jpg",
+            "entities": [
+                {
+                    "offset": 49,
+                    "length": 14,
+                    "type": "bot_command"
+                },
+                {
+                    "offset": 93,
+                    "length": 80,
+                    "type": "url"
+                }
+            ]
+        }
+    },
+    {
+        "ok": true,
+        "result": {
+            "message_id": 2249,
+            "from": {
+                "id": 6026613178,
+                "is_bot": true,
+                "first_name": "bamper777",
+                "username": "bamper777bot"
+            },
+            "chat": {
+                "id": 5650732610,
+                "first_name": "Hask777",
+                "last_name": "Django",
+                "type": "private"
+            },
+            "date": 1677572254,
+            "text": "A4532670000 Трос кулисы КПП  к Smart Forfour 2 поколение (2015-2020), 2015 г.\n/zapchast_tros-kulisy-kpp/92501-e3133108/\nhttps://bamper.by//upload/photos_import/ed7/ed7cd9a6f71026dc32a30261c3ada5cf.jpg",
+            "entities": [
+                {
+                    "offset": 78,
+                    "length": 14,
+                    "type": "bot_command"
+                },
+                {
+                    "offset": 120,
+                    "length": 80,
+                    "type": "url"
+                }
+            ]
+        }
+    },
+    {
+        "ok": true,
+        "result": {
+            "message_id": 2250,
+            "from": {
+                "id": 6026613178,
+                "is_bot": true,
+                "first_name": "bamper777",
+                "username": "bamper777bot"
+            },
+            "chat": {
+                "id": 5650732610,
+                "first_name": "Hask777",
+                "last_name": "Django",
+                "type": "private"
+            },
+            "date": 1677572254,
+            "text": "Трос кулисы КПП  к Smart Fortwo 3 поколение (2015-2020), 2015 г.\n/zapchast_tros-kulisy-kpp/92501-e3133111/\nhttps://bamper.by//upload/photos_import/35f/35f424d0a11d48b27c1dec7a9fd1ab09.jpg",
+            "entities": [
+                {
+                    "offset": 65,
+                    "length": 14,
+                    "type": "bot_command"
+                },
+                {
+                    "offset": 107,
+                    "length": 80,
+                    "type": "url"
+                }
+            ]
+        }
+    }
+]
