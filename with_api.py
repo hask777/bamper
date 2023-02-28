@@ -39,6 +39,17 @@ def get_updates():
 
     try:
         if getUp['result'][0]['message']['text'] is not None:
+
+            send_message_url = base_url+'sendMessage?'
+
+            params = {
+                    'chat_id':'5650732610',
+                    'text': 'Начинаем поиск ...',
+
+            }
+            
+            start_search = requests.get(send_message_url, params=params).json()
+
             get_brands_buttons(getUp) 
     except:
         if getUp['result'][0]['callback_query']['data'] in get_brands():
@@ -47,15 +58,14 @@ def get_updates():
         else:
             get_details_list_button(update)
 
-            
             if update['callback_query']['data'] is not None:
                 get_items_list(update)
 
-            try:
+            try:     
                 while True:
                     check_items(items_arr)
 
-                    print(update)
+                    print('update')
                     time.sleep(30)
                     
             except:
@@ -246,7 +256,7 @@ def get_items_list(update):
         return
        
 
-def check_items(items):
+def check_items(items):            
 
     its = []
     if items is not None:
@@ -275,6 +285,8 @@ def check_items(items):
                         }
                 
                 send_items = requests.get(send_message_url, params=params).json()
+
+
             else:
                 print('not new details')
     
