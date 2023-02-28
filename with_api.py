@@ -9,6 +9,8 @@ import time
 arr = []
 main_dict = {}
 
+items_arr = []
+
 # make start
 # make delete message
 
@@ -48,6 +50,16 @@ def get_updates():
             
             if update['callback_query']['data'] is not None:
                 get_items_list(update)
+
+            try:
+                while True:
+                    check_items(items_arr)
+
+                    print(update)
+                    time.sleep(30)
+                    
+            except:
+                return
             
 
             
@@ -185,8 +197,6 @@ def get_suplies(update):
 
         send_suplies = requests.get(send_message_url, params=params).json()
 
-        with open('suplies.json', 'w', encoding='utf-8') as f:
-            json.dump(send_suplies, f, indent=4, ensure_ascii=False)
     except:
         return
    
@@ -230,27 +240,28 @@ def get_items_list(update):
             
             send_items = requests.get(send_message_url, params=params).json()
 
-        check_items(items,url)
+            items_arr.append(items)
 
     except:
         return
        
 
-def check_items(items, url):
+def check_items(items):
+
     its = []
     if items is not None:
         
-        check_items = requests.get(url).json()
+        check_items = requests.get('http://127.0.0.1:8000/zapchast').json()
 
-        for it in items:
-            # it['title']
+        for it in items[0]:
+            it['title']
             its.append(it['title'])
         # print(its)
 
         for item in check_items:
             # print(item['title'])
             if item['title'] not in its:
-                print(item)
+                # print(item)
 
                 img = item['img']
                 link = item['link']
@@ -267,24 +278,6 @@ def check_items(items, url):
             else:
                 print('not new details')
     
-    
-# Make keyboard with button Следить
-    
-# read from database if database is not empty else read db
-# check ids if new ids or title is new
-
-# make Back
-
-    
-
-
-
-
-
-
-
-
-
 
 def main():
     get_updates()

@@ -1,7 +1,7 @@
 {
     "ok": true,
     "result": {
-        "message_id": 2531,
+        "message_id": 2693,
         "from": {
             "id": 6026613178,
             "is_bot": true,
@@ -14,122 +14,26 @@
             "last_name": "Django",
             "type": "private"
         },
-        "date": 1677585524,
+        "date": 1677600726,
         "text": "Выберете деталь",
         "reply_markup": {
             "inline_keyboard": [
                 [
                     {
-                        "text": "Актуатор сцепления",
-                        "callback_data": "zapchast_aktuator-stsepleniya"
+                        "text": "Блок управления зеркалами",
+                        "callback_data": "zapchast_blok-upravleniya-zerkalami"
                     }
                 ],
                 [
                     {
-                        "text": "Блок управления АКПП",
-                        "callback_data": "zapchast_blok-upravleniya-akpp"
+                        "text": "Проводка двигателя",
+                        "callback_data": "zapchast_provodka-dvigatelya"
                     }
                 ],
                 [
                     {
-                        "text": "Диск сцепления",
-                        "callback_data": "zapchast_disk-stsepleniya"
-                    }
-                ],
-                [
-                    {
-                        "text": "Комплект сцепления",
-                        "callback_data": "zapchast_komplekt-stsepleniya"
-                    }
-                ],
-                [
-                    {
-                        "text": "Корзина сцепления",
-                        "callback_data": "zapchast_korzina-stsepleniya"
-                    }
-                ],
-                [
-                    {
-                        "text": "КПП автоматическая (АКПП)",
-                        "callback_data": "zapchast_kpp-avtomaticheskaya-akpp"
-                    }
-                ],
-                [
-                    {
-                        "text": "КПП механическая (МКПП)",
-                        "callback_data": "zapchast_kpp-mekhanicheskaya-mkpp"
-                    }
-                ],
-                [
-                    {
-                        "text": "КПП механическая (МКПП) 5-ступенчатая",
-                        "callback_data": "zapchast_kpp-mekhanicheskaya-mkpp-5-stupenchataya"
-                    }
-                ],
-                [
-                    {
-                        "text": "КПП роботизированная",
-                        "callback_data": "zapchast_kpp-robotizirovannaya"
-                    }
-                ],
-                [
-                    {
-                        "text": "Кулиса",
-                        "callback_data": "zapchast_kulisa"
-                    }
-                ],
-                [
-                    {
-                        "text": "Маховик АКПП (драйв плата)",
-                        "callback_data": "zapchast_makhovik-akpp-drayv-plata"
-                    }
-                ],
-                [
-                    {
-                        "text": "Подушка крепления КПП",
-                        "callback_data": "zapchast_podushka-krepleniya-kpp"
-                    }
-                ],
-                [
-                    {
-                        "text": "Полуось задняя (приводной вал, ШРУС)",
-                        "callback_data": "zapchast_poluos-zadnyaya-privodnoy-val-shrus"
-                    }
-                ],
-                [
-                    {
-                        "text": "Полуось передняя левая (приводной вал, ШРУС)",
-                        "callback_data": "zapchast_poluos-perednyaya-levaya-privodnoy-val-shrus"
-                    }
-                ],
-                [
-                    {
-                        "text": "Полуось передняя правая (приводной вал, ШРУС)",
-                        "callback_data": "zapchast_poluos-perednyaya-pravaya-privodnoy-val-shrus"
-                    }
-                ],
-                [
-                    {
-                        "text": "Селектор АКПП",
-                        "callback_data": "zapchast_selektor-akpp"
-                    }
-                ],
-                [
-                    {
-                        "text": "Трос кулисы КПП",
-                        "callback_data": "zapchast_tros-kulisy-kpp"
-                    }
-                ],
-                [
-                    {
-                        "text": "Цепь",
-                        "callback_data": "zapchast_tsep"
-                    }
-                ],
-                [
-                    {
-                        "text": "ШРУС наружный",
-                        "callback_data": "zapchast_shrus-naruzhnyy"
+                        "text": "Стартер",
+                        "callback_data": "zapchast_starter"
                     }
                 ]
             ]
