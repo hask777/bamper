@@ -1,0 +1,401 @@
+{
+    "ok": true,
+    "result": [
+        {
+            "update_id": 348125857,
+            "callback_query": {
+                "id": "5822967688061549745",
+                "from": {
+                    "id": 5650732610,
+                    "is_bot": false,
+                    "first_name": "Hask777",
+                    "last_name": "Django",
+                    "language_code": "ru"
+                },
+                "message": {
+                    "message_id": 175,
+                    "from": {
+                        "id": 6022217297,
+                        "is_bot": true,
+                        "first_name": "bamper hask777 bot",
+                        "username": "bmphask777Bot"
+                    },
+                    "chat": {
+                        "id": 5650732610,
+                        "first_name": "Hask777",
+                        "last_name": "Django",
+                        "type": "private"
+                    },
+                    "date": 1677684829,
+                    "text": "Выберете систему",
+                    "reply_markup": {
+                        "inline_keyboard": [
+                            [
+                                {
+                                    "text": "Аксессуары",
+                                    "callback_data": "/catalog/smart-fortwo/group_aksessuary/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Аудио, видео, медиа",
+                                    "callback_data": "/catalog/smart-fortwo/group_audio-video-media/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Выхлопная система",
+                                    "callback_data": "/catalog/smart-fortwo/group_vykhlopnaya-sistema/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Двигатель",
+                                    "callback_data": "/catalog/smart-fortwo/group_dvigatel/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Диски",
+                                    "callback_data": "/catalog/smart-fortwo/group_diski/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Кузовщина",
+                                    "callback_data": "/catalog/smart-fortwo/group_kuzov/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Оптика",
+                                    "callback_data": "/catalog/smart-fortwo/group_optika/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Отопление и вентиляция",
+                                    "callback_data": "/catalog/smart-fortwo/group_otopleniye-i-ventilyatsiya/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Пассивная безопасность",
+                                    "callback_data": "/catalog/smart-fortwo/group_passivnaya-bezopasnost/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Подвеска",
+                                    "callback_data": "/catalog/smart-fortwo/group_podveska/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Рулевое управление",
+                                    "callback_data": "/catalog/smart-fortwo/group_rulevoe-upravlenie/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Салон",
+                                    "callback_data": "/catalog/smart-fortwo/group_salon/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Система охлаждения",
+                                    "callback_data": "/catalog/smart-fortwo/group_sistema-okhlazhdeniya/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Системы комфорта",
+                                    "callback_data": "/catalog/smart-fortwo/group_sistemy-komforta/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Стекла",
+                                    "callback_data": "/catalog/smart-fortwo/group_stekla/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Стеклоочистители",
+                                    "callback_data": "/catalog/smart-fortwo/group_stekloochistiteli/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Топливная система",
+                                    "callback_data": "/catalog/smart-fortwo/group_toplivnaya-sistema/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Тормозная система",
+                                    "callback_data": "/catalog/smart-fortwo/group_tormoznaya-sistema/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Трансмиссия",
+                                    "callback_data": "/catalog/smart-fortwo/group_transmissiya/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Электрика",
+                                    "callback_data": "/catalog/smart-fortwo/group_elektrika/"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Без группы",
+                                    "callback_data": "/catalog/smart-fortwo/group_/"
+                                }
+                            ]
+                        ]
+                    }
+                },
+                "chat_instance": "-7663056215740479736",
+                "data": "/catalog/smart-fortwo/group_elektrika/"
+            }
+        },
+        {
+            "update_id": 348125858,
+            "callback_query": {
+                "id": "5822967685343374497",
+                "from": {
+                    "id": 5650732610,
+                    "is_bot": false,
+                    "first_name": "Hask777",
+                    "last_name": "Django",
+                    "language_code": "ru"
+                },
+                "message": {
+                    "message_id": 176,
+                    "from": {
+                        "id": 6022217297,
+                        "is_bot": true,
+                        "first_name": "bamper hask777 bot",
+                        "username": "bmphask777Bot"
+                    },
+                    "chat": {
+                        "id": 5650732610,
+                        "first_name": "Hask777",
+                        "last_name": "Django",
+                        "type": "private"
+                    },
+                    "date": 1677684836,
+                    "text": "Выберете деталь",
+                    "reply_markup": {
+                        "inline_keyboard": [
+                            [
+                                {
+                                    "text": "Блок Bluetooth",
+                                    "callback_data": "zapchast_blok-bluetooth"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Блок BSM",
+                                    "callback_data": "zapchast_blok-bsm"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Блок SAM",
+                                    "callback_data": "zapchast_blok-sam"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Блок комфорта",
+                                    "callback_data": "zapchast_blok-komforta"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Блок предохранителей",
+                                    "callback_data": "zapchast_blok-predokhraniteley"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Блок реле",
+                                    "callback_data": "zapchast_blok-rele"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Блок управления (другие)",
+                                    "callback_data": "zapchast_blok-upravleniya-drugie"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Блок управления ESP",
+                                    "callback_data": "zapchast_blok-upravleniya-esp"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Блок управления зеркалами",
+                                    "callback_data": "zapchast_blok-upravleniya-zerkalami"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Высоковольтная батарея",
+                                    "callback_data": "zapchast_vysokovoltnaya-batareya"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Генератор",
+                                    "callback_data": "zapchast_generator"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Датчик (прочие)",
+                                    "callback_data": "zapchast_datchik-prochie"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Датчик ускорения",
+                                    "callback_data": "zapchast_datchik-uskoreniya"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Замок зажигания",
+                                    "callback_data": "zapchast_zamok-zazhiganiya"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Зарядное устройство (кабель зарядный)",
+                                    "callback_data": "zapchast_zaryadnoe-ustroystvo-kabel-zaryadnyy"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Катушка зажигания",
+                                    "callback_data": "zapchast_katushka-zazhiganiya"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Контактная группа",
+                                    "callback_data": "zapchast_kontaktnaya-gruppa"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Кронштейн генератора",
+                                    "callback_data": "zapchast_kronshteyn-generatora"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Лямбда-зонд",
+                                    "callback_data": "zapchast_lyambda-zond"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Переключатель дворников",
+                                    "callback_data": "zapchast_pereklyuchatel-dvornikov"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Переключатель подрулевой (стрекоза)",
+                                    "callback_data": "zapchast_pereklyuchatel-podrulevoy-strekoza"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Переходник для зарядки",
+                                    "callback_data": "zapchast_perekhodnik-dlya-zaryadki"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Провод высоковольтный",
+                                    "callback_data": "zapchast_provod-vysokovoltnyy"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Проводка",
+                                    "callback_data": "zapchast_provodka"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Проводка двигателя",
+                                    "callback_data": "zapchast_provodka-dvigatelya"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Проводка крышки багажника",
+                                    "callback_data": "zapchast_provodka-kryshki-bagazhnika"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Расходомер воздуха",
+                                    "callback_data": "zapchast_raskhodomer-vozdukha"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Реле (прочие)",
+                                    "callback_data": "zapchast_rele-prochie"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Реле накала свечей",
+                                    "callback_data": "zapchast_rele-nakala-svechey"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Розетка зарядки автомобиля",
+                                    "callback_data": "zapchast_rozetka-zaryadki-avtomobilya"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Сигнал (клаксон)",
+                                    "callback_data": "zapchast_signal-klakson"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Стартер",
+                                    "callback_data": "zapchast_starter"
+                                }
+                            ],
+                            [
+                                {
+                                    "text": "Электропривод",
+                                    "callback_data": "zapchast_elektroprivod"
+                                }
+                            ]
+                        ]
+                    }
+                },
+                "chat_instance": "-7663056215740479736",
+                "data": "zapchast_starter"
+            }
+        }
+    ]
+}

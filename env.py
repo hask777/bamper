@@ -1,2 +1,2 @@
-token = '6026613178:AAF9CqDYk1jPgWwPjS7a6GFwBeuqmHyZWxk';
+token = '6022217297:AAGFn4NA2cpqL7FMm-2I-Q2iB9lkvCq2vCg';
 base_url = f'https://api.telegram.org/bot{token}/'

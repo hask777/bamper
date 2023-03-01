@@ -18,6 +18,18 @@ items_arr = []
 def get_updates():
     url = base_url+'getUpdates'
     getUp = requests.get(url).json()
+
+    try:
+        chat_id = getUp['result'][0]['message']['chat']['id']
+    except:
+        chat_id = getUp['result'][0]['callback_query']['message']['chat']['id']
+
+    
+
+    with open('up.json', 'w', encoding='utf-8') as f:
+        json.dump(getUp, f, indent=4, ensure_ascii=False)
+
+    # print(getUp)
     
     try:
         lats_update = getUp['result'][-2]['update_id']
@@ -34,6 +46,7 @@ def get_updates():
     try:
         if getUp['result'][0]['callback_query'] is not None:
             update = getUp['result'][0]  
+            
     except:
         update = None
 
@@ -43,27 +56,27 @@ def get_updates():
             send_message_url = base_url+'sendMessage?'
 
             params = {
-                    'chat_id':'5650732610',
+                    'chat_id':chat_id,
                     'text': 'Начинаем поиск ...',
 
             }
             
             start_search = requests.get(send_message_url, params=params).json()
 
-            get_brands_buttons(getUp) 
+            get_brands_buttons(getUp, chat_id) 
     except:
         if getUp['result'][0]['callback_query']['data'] in get_brands():
-            get_models_buttons(update)
+            get_models_buttons(update, chat_id)
 
         else:
-            get_details_list_button(update)
+            get_details_list_button(update, chat_id)
 
             if update['callback_query']['data'] is not None:
-                get_items_list(update)
+                get_items_list(update, chat_id)
 
             try:     
                 while True:
-                    check_items(items_arr)
+                    check_items(items_arr, chat_id)
 
                     print('update')
                     time.sleep(30)
@@ -75,16 +88,17 @@ def get_updates():
             
             
 
-def get_brands_buttons(request):
+def get_brands_buttons(request, chat_id):
+    
     if len(request['result']) > 0:
-
+       
         for update in request['result']:
             # print(update['message']['text'])
             lats_update = update['update_id']
             send_message_url = base_url+'sendMessage?'
 
             params = {
-                    'chat_id':'5650732610',
+                    'chat_id': chat_id,
                     'text': 'Chose brand',
                     'reply_markup': json.dumps({
                     'inline_keyboard': get_inline_keyboard(get_brands)
@@ -96,7 +110,7 @@ def get_brands_buttons(request):
 
             return update
 
-def get_models_buttons(update):
+def get_models_buttons(update, chat_id):
     if update is not None:
 
         brand = update['callback_query']['data'].lower()
@@ -120,7 +134,7 @@ def get_models_buttons(update):
         models = requests.get('http://127.0.0.1:8000/models').json()
 
         params = {
-                    'chat_id':'5650732610',
+                    'chat_id': chat_id,
                     'text': 'Выберете модель',
                     'reply_markup': json.dumps({
                     'inline_keyboard': get_inline_keyboard(None, models)
@@ -132,7 +146,7 @@ def get_models_buttons(update):
     else:
         return
 
-def get_details_list_button(update):  
+def get_details_list_button(update, chat_id):  
     m_list =[]
 
     for upd in update['callback_query']['message']['reply_markup']['inline_keyboard']:
@@ -161,7 +175,7 @@ def get_details_list_button(update):
         send_message_url = base_url+'sendMessage?'
 
         params = {
-                    'chat_id':'5650732610',
+                    'chat_id': chat_id,
                     'text': 'Выберете систему',
                     'reply_markup': json.dumps({
                     'inline_keyboard': get_inline_keyboard(None, dt),
@@ -172,10 +186,10 @@ def get_details_list_button(update):
         send_details = requests.get(send_message_url, params=params).json()
 
     else:
-        get_suplies(update)
+        get_suplies(update, chat_id)
         return update['callback_query']['data']
 
-def get_suplies(update):
+def get_suplies(update, chat_id):
     # print(update['callback_query']['data'])
 
     suplies = update['callback_query']['data']
@@ -197,7 +211,7 @@ def get_suplies(update):
         send_message_url = base_url+'sendMessage?'
 
         params = {
-                        'chat_id':'5650732610',
+                        'chat_id': chat_id,
                         'text': 'Выберете деталь',
                         'reply_markup': json.dumps({
                         'inline_keyboard': get_inline_keyboard(None, spl),
@@ -210,7 +224,7 @@ def get_suplies(update):
     except:
         return
    
-def get_items_list(update):
+def get_items_list(update, chat_id):
     # print(update['callback_query']['data'])
     all_items = []
 
@@ -244,7 +258,7 @@ def get_items_list(update):
             send_message_url = base_url+'sendMessage?'
 
             params = {
-                        'chat_id':'5650732610',
+                        'chat_id': chat_id,
                         'text': f'{title}\n{link}\nhttps://bamper.by/{img}',
                     }
             
@@ -256,7 +270,7 @@ def get_items_list(update):
         return
        
 
-def check_items(items):            
+def check_items(items, chat_id):            
 
     its = []
     if items is not None:
@@ -280,7 +294,7 @@ def check_items(items):
                 send_message_url = base_url+'sendMessage?'
 
                 params = {
-                            'chat_id':'5650732610',
+                            'chat_id': chat_id,
                             'text': f'{title}\n{link}\nhttps://bamper.by/{img}',
                         }
                 
